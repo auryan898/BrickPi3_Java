@@ -9,6 +9,24 @@
 package com.brickpi3.java;
 
 public class brickpiJNI {
+  static {
+    boolean loaded = false;
+    Throwable[] errors = new Throwable[3];
+
+    try {
+      System.loadLibrary("libbrickpi");
+      loaded = true;
+    } catch (Exception | Error e) {
+      errors[0] = e;
+    }
+
+    try {
+      System.load("/usr/lib/libbrickpi.so");
+      loaded = true;
+    } catch (Exception | Error e) {
+      errors[1] = e;
+    }
+  }
   public final static native String FIRMWARE_VERSION_REQUIRED_get();
   public final static native int LONGEST_SPI_TRANSFER_get();
   public final static native int LONGEST_I2C_TRANSFER_get();
