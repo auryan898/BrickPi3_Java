@@ -14,9 +14,9 @@ public class brickpiJNI {
     Throwable[] errors = new Throwable[3];
 
     try {
-      // System.load(brickpiJNI.class.getClassLoader().getResource("libbrickpi.so").getFile());
+      System.load(brickpiJNI.class.getClassLoader().getResource("libbrickpi.so").getFile());
       System.out.println("Loaded resource");
-      loaded = false;
+      loaded = true;
     } catch (Exception | Error e) {
       errors[0] = e;
     }
@@ -41,10 +41,12 @@ public class brickpiJNI {
       errors[2] = e;
     }
 
-    if (!loaded)
-      for (Throwable e : errors){
-        e.printStackTrace();
+    if (!loaded) {
+      for (Throwable e : errors) {
+        if (e != null)
+          e.printStackTrace();
       }
+    }
   }
   public final static native String FIRMWARE_VERSION_REQUIRED_get();
   public final static native int LONGEST_SPI_TRANSFER_get();
