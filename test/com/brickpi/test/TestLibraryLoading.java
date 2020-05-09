@@ -1,4 +1,4 @@
-package com.brickkpi.test;
+package com.brickpi.test;
 
 import com.brickpi.java.BrickPi3;
 
