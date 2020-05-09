@@ -1,3 +1,4 @@
 *.o
 *.cxx
 *.class
+/bin/
