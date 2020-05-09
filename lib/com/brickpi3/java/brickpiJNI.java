@@ -14,18 +14,37 @@ public class brickpiJNI {
     Throwable[] errors = new Throwable[3];
 
     try {
-      System.loadLibrary("libbrickpi");
-      loaded = true;
+      // System.load(brickpiJNI.class.getClassLoader().getResource("libbrickpi.so").getFile());
+      System.out.println("Loaded resource");
+      loaded = false;
     } catch (Exception | Error e) {
       errors[0] = e;
     }
 
     try {
-      System.load("/usr/lib/libbrickpi.so");
+      if (!loaded) {
+        System.loadLibrary("libbrickpi");
+        System.out.println("Loaded from path");
+      }
       loaded = true;
     } catch (Exception | Error e) {
       errors[1] = e;
     }
+
+    try {
+      if (!loaded){
+        System.load("/usr/lib/libbrickpi.so");
+        System.out.println("Loaded from usr lib");
+      }
+      loaded = true;
+    } catch (Exception | Error e) {
+      errors[2] = e;
+    }
+
+    if (!loaded)
+      for (Throwable e : errors){
+        e.printStackTrace();
+      }
   }
   public final static native String FIRMWARE_VERSION_REQUIRED_get();
   public final static native int LONGEST_SPI_TRANSFER_get();
