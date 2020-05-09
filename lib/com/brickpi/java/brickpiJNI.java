@@ -14,11 +14,35 @@ import java.net.URISyntaxException;
 
 public class brickpiJNI {
   static {
+    boolean loaded = false;
+    Throwable[] errors = new Throwable[3];
+    
     try {
       System.loadLibrary("libbrickpi");
-    } catch (UnsatisfiedLinkError e) {
+      loaded = true;
+    } catch (Exception | Error e) {
+      errors[0] = e;
+    }
+
+    try {
+      System.load("/usr/lib/libbrickpi.so");
+      loaded = true;
+    } catch (Exception | Error e) {
+      errors[1] = e;
+    }
+
+    try {
+      System.load(brickpiJNI.class.getClassLoader().getResource("libbrickpi.so").getFile());
+      loaded = true;
+    } catch (Exception | Error e) {
+      errors[2] = e;
+    }
+    
+    if (!loaded) {
       System.out.println("Must use load the libbrickpi.so instance before usage.");
-      e.printStackTrace();
+      for (Throwable error : errors) {
+        error.printStackTrace();
+      }
     }
   }
   
