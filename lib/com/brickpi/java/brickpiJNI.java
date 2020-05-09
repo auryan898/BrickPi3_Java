@@ -15,8 +15,8 @@ import java.net.URISyntaxException;
 public class brickpiJNI {
   static {
     try {
-      System.load( brickpiJNI.class.getClassLoader().getResource("libbrickpi.so").toURI().getPath() );
-    } catch (URISyntaxException | UnsatisfiedLinkError e) {
+      System.loadLibrary("libbrickpi");
+    } catch (UnsatisfiedLinkError e) {
       System.out.println("Must use load the libbrickpi.so instance before usage.");
       e.printStackTrace();
     }
