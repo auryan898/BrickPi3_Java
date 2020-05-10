@@ -23,11 +23,11 @@ public class SWIGTYPE_p_int8_t extends SWIG {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
-   public boolean equals(Object obj) {
-    boolean equal = false;
-    if (obj instanceof SWIGTYPE_p_int8_t)
-      equal = (((SWIGTYPE_p_int8_t)obj).swigCPtr == this.swigCPtr);
-    return equal;
+  public boolean equals(Object obj) {
+  boolean equal = false;
+  if (obj instanceof SWIGTYPE_p_int8_t)
+    equal = (((SWIGTYPE_p_int8_t)obj).swigCPtr == this.swigCPtr);
+  return equal;
   }
   public int hashCode() {
     return (int)swigCPtr;

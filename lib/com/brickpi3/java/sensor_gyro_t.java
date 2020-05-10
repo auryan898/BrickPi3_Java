@@ -36,11 +36,11 @@ public class sensor_gyro_t extends SWIG {
     }
   }
 
-   public boolean equals(Object obj) {
-    boolean equal = false;
-    if (obj instanceof sensor_gyro_t)
-      equal = (((sensor_gyro_t)obj).swigCPtr == this.swigCPtr);
-    return equal;
+  public boolean equals(Object obj) {
+  boolean equal = false;
+  if (obj instanceof sensor_gyro_t)
+    equal = (((sensor_gyro_t)obj).swigCPtr == this.swigCPtr);
+  return equal;
   }
   public int hashCode() {
     return (int)swigCPtr;

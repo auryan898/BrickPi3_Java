@@ -36,11 +36,11 @@ public class i2c_struct_t extends SWIG {
     }
   }
 
-   public boolean equals(Object obj) {
-    boolean equal = false;
-    if (obj instanceof i2c_struct_t)
-      equal = (((i2c_struct_t)obj).swigCPtr == this.swigCPtr);
-    return equal;
+  public boolean equals(Object obj) {
+  boolean equal = false;
+  if (obj instanceof i2c_struct_t)
+    equal = (((i2c_struct_t)obj).swigCPtr == this.swigCPtr);
+  return equal;
   }
   public int hashCode() {
     return (int)swigCPtr;

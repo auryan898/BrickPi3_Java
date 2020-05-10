@@ -15,21 +15,15 @@
 %include "cpointer.i"
 %include "various.i"
 %include "arrays_java.i"
-%typemap(in) uint8_t {
-  $1 = $input;
-}
 
+%typemap(javabase) SWIGTYPE, SWIGTYPE *, SWIGTYPE &, SWIGTYPE [], SWIGTYPE (CLASS::*) "SWIG"
 
-%typemap(javabase) SWIGTYPE, SWIGTYPE *, SWIGTYPE &, SWIGTYPE [], 
-                                                         SWIGTYPE (CLASS::*) "SWIG"
-
-%typemap(javacode) SWIGTYPE, SWIGTYPE *, SWIGTYPE &, SWIGTYPE [], 
-                                                         SWIGTYPE (CLASS::*) %{
-   public boolean equals(Object obj) {
-    boolean equal = false;
-    if (obj instanceof $javaclassname)
-      equal = ((($javaclassname)obj).swigCPtr == this.swigCPtr);
-    return equal;
+%typemap(javacode) SWIGTYPE, SWIGTYPE *, SWIGTYPE &, SWIGTYPE [], SWIGTYPE (CLASS::*) %{
+  public boolean equals(Object obj) {
+  boolean equal = false;
+  if (obj instanceof $javaclassname)
+    equal = ((($javaclassname)obj).swigCPtr == this.swigCPtr);
+  return equal;
   }
   public int hashCode() {
     return (int)swigCPtr;

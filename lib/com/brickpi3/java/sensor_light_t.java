@@ -36,11 +36,11 @@ public class sensor_light_t extends SWIG {
     }
   }
 
-   public boolean equals(Object obj) {
-    boolean equal = false;
-    if (obj instanceof sensor_light_t)
-      equal = (((sensor_light_t)obj).swigCPtr == this.swigCPtr);
-    return equal;
+  public boolean equals(Object obj) {
+  boolean equal = false;
+  if (obj instanceof sensor_light_t)
+    equal = (((sensor_light_t)obj).swigCPtr == this.swigCPtr);
+  return equal;
   }
   public int hashCode() {
     return (int)swigCPtr;
