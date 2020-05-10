@@ -12,6 +12,7 @@ package com.brickpi3.java;
 
 public class brickpiJNI {
   static {
+    boolean debug = System.getProperty("debug").equalsIgnoreCase("true");
     boolean loaded = false;
     Throwable[] errors = new Throwable[4];
 
@@ -19,7 +20,8 @@ public class brickpiJNI {
       LibraryExtractionHelper.extractResourceToHome("libbrickpi.so");
       System.load(
           LibraryExtractionHelper.getHomeFile(".brickpi3java", "libbrickpi.so").getAbsolutePath());
-      System.out.println("Loaded home resource");
+      if (debug)
+        System.out.println("Loaded home resource");
       loaded = true;
     } catch (Exception | Error e) {
       errors[0] = e;
@@ -27,7 +29,8 @@ public class brickpiJNI {
 
     try {
       System.load(brickpiJNI.class.getClassLoader().getResource("libbrickpi.so").getFile());
-      System.out.println("Loaded resource");
+      if (debug)
+        System.out.println("Loaded resource");
       loaded = true;
     } catch (Exception | Error e) {
       errors[1] = e;
@@ -36,7 +39,8 @@ public class brickpiJNI {
     try {
       if (!loaded) {
         System.loadLibrary("libbrickpi");
-        System.out.println("Loaded from path");
+        if (debug)
+          System.out.println("Loaded from path");
       }
       loaded = true;
     } catch (Exception | Error e) {
@@ -46,7 +50,8 @@ public class brickpiJNI {
     try {
       if (!loaded) {
         System.load("/usr/lib/libbrickpi.so");
-        System.out.println("Loaded from usr lib");
+        if (debug)
+          System.out.println("Loaded from usr lib");
       }
       loaded = true;
     } catch (Exception | Error e) {
