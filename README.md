@@ -7,6 +7,10 @@ You can find the original [BrickPi3 github repo here](https://github.com/DexterI
 
 Used [SWIG 4.0](http://www.swig.org/) to convert the code.
 
+## Auto-Generated Javadoc
+
+[https://auryan898.github.io/BrickPi3_Java/docs/](https://auryan898.github.io/BrickPi3_Java/docs/)
+
 ## Usage
 
 Include the BrickPi3_Java.jar library into your project. It is runnable, 
