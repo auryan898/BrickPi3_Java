@@ -20,3 +20,13 @@ Note: if an `UnsatisfiedLinkError` occurs, then this is not compatible with your
 there is no BrickPi3 HAT attached to your Raspberry Pi: 
 
     detect error: get_manufacturer failed. Perhaps the BrickPi3 is not connected, or the address is incorrect.
+
+## Re-Building the Java code with SWIG
+
+If you wish to rebuild the Java code, it can be done by running the build.sh file on a Raspberry Pi:
+
+    sh ./build.sh
+    
+This can only be done after installing SWIG 4.0, and it must be done on a Raspberry Pi running Raspbian.
+
+**Warning:** this action will also overwrite the automatic library loading and extraction tool built in to the auto-generated Java code (will provide a fix for this at a later date).
