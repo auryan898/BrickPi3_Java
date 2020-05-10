@@ -11,7 +11,9 @@
 package com.brickpi3.java;
 
 public class brickpiJNI {
-  
+  static {
+    LibraryExtractionHelper.loadBrickPiLibrary();
+  }
 
   public final static native String FIRMWARE_VERSION_REQUIRED_get();
 
