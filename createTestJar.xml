@@ -6,10 +6,10 @@
     <property name="dir.buildfile" value="."/>
     <property name="dir.jarfile" value="${dir.buildfile}"/>
     <target name="create_run_jar">
-        <jar destfile="${dir.jarfile}/TestApplication.jar">
+        <jar destfile="${dir.jarfile}/BrickPi3_Java.jar">
             <manifest>
                 <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
-                <attribute name="Rsrc-Main-Class" value="com.brickpi.test.TestLibraryLoading"/>
+                <attribute name="Rsrc-Main-Class" value="com.brickpi3.test.DetectBrickPi"/>
                 <attribute name="Class-Path" value="."/>
                 <attribute name="Rsrc-Class-Path" value="./"/>
             </manifest>
