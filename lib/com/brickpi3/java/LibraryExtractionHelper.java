@@ -9,6 +9,72 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class LibraryExtractionHelper {
+  /**
+   * com.brickpi3.java.LibraryExtractionHelper.loadBrickPiLibrary()
+   */
+  static void loadBrickPiLibrary() {
+    boolean debug;
+    try {
+      debug = "true".equalsIgnoreCase(System.getProperty("debug"));
+    } catch (NullPointerException e) {
+      debug = false;
+    }
+    if (debug)
+      System.out.println("DEBUG ON");
+    boolean loaded = false;
+    Throwable[] errors = new Throwable[4];
+
+    try {
+      LibraryExtractionHelper.extractResourceToHome("libbrickpi.so");
+      System.load(
+          LibraryExtractionHelper.getHomeFile(".brickpi3java", "libbrickpi.so").getAbsolutePath());
+      if (debug)
+        System.out.println("Loaded home resource");
+      loaded = true;
+    } catch (Exception | Error e) {
+      errors[0] = e;
+    }
+
+    try {
+      System.load(
+          LibraryExtractionHelper.class.getClassLoader().getResource("libbrickpi.so").getFile());
+      if (debug)
+        System.out.println("Loaded resource");
+      loaded = true;
+    } catch (Exception | Error e) {
+      errors[1] = e;
+    }
+
+    try {
+      if (!loaded) {
+        System.loadLibrary("libbrickpi");
+        if (debug)
+          System.out.println("Loaded from path");
+      }
+      loaded = true;
+    } catch (Exception | Error e) {
+      errors[2] = e;
+    }
+
+    try {
+      if (!loaded) {
+        System.load("/usr/lib/libbrickpi.so");
+        if (debug)
+          System.out.println("Loaded from usr lib");
+      }
+      loaded = true;
+    } catch (Exception | Error e) {
+      errors[3] = e;
+    }
+
+    if (!loaded) {
+      for (Throwable e : errors) {
+        if (e != null)
+          e.printStackTrace();
+      }
+    }
+  }
+
   static void extractResourceToHome(String filename) {
     InputStream libraryFile = getLibraryResource(filename);
     placeFileInHomeDirectory(libraryFile, ".brickpi3java", filename);
