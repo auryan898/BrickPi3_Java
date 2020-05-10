@@ -43,7 +43,7 @@ public class sensor_touch_t {
     return equal;
   }
   public int hashCode() {
-    return (int)getPointer();
+    return (int)swigCPtr;
   }
 
   public void setPressed(boolean value) {

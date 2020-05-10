@@ -43,7 +43,7 @@ public class sensor_gyro_t {
     return equal;
   }
   public int hashCode() {
-    return (int)getPointer();
+    return (int)swigCPtr;
   }
 
   public void setAbs(SWIGTYPE_p_int16_t value) {

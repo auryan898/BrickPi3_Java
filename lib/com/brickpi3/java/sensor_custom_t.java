@@ -43,7 +43,7 @@ public class sensor_custom_t {
     return equal;
   }
   public int hashCode() {
-    return (int)getPointer();
+    return (int)swigCPtr;
   }
 
   public void setAdc1(SWIGTYPE_p_uint16_t value) {

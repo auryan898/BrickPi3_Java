@@ -43,7 +43,7 @@ public class i2c_struct_t {
     return equal;
   }
   public int hashCode() {
-    return (int)getPointer();
+    return (int)swigCPtr;
   }
 
   public void setSpeed(SWIGTYPE_p_uint8_t value) {

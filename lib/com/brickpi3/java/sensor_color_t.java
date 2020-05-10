@@ -43,7 +43,7 @@ public class sensor_color_t {
     return equal;
   }
   public int hashCode() {
-    return (int)getPointer();
+    return (int)swigCPtr;
   }
 
   public void setColor(SWIGTYPE_p_int8_t value) {

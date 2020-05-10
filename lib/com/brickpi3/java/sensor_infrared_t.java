@@ -43,7 +43,7 @@ public class sensor_infrared_t {
     return equal;
   }
   public int hashCode() {
-    return (int)getPointer();
+    return (int)swigCPtr;
   }
 
   public void setProximity(SWIGTYPE_p_uint8_t value) {

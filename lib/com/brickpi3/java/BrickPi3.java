@@ -43,7 +43,7 @@ public class BrickPi3 {
     return equal;
   }
   public int hashCode() {
-    return (int)getPointer();
+    return (int)swigCPtr;
   }
 
   public BrickPi3(SWIGTYPE_p_uint8_t addr) {

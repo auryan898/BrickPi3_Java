@@ -43,7 +43,7 @@ public class sensor_light_t {
     return equal;
   }
   public int hashCode() {
-    return (int)getPointer();
+    return (int)swigCPtr;
   }
 
   public void setAmbient(SWIGTYPE_p_int16_t value) {
