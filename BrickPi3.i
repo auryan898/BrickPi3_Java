@@ -10,7 +10,7 @@
   }
 %}
 
-
+%include "stdint.i"
 %include "enumsimple.swg"
 %include "cpointer.i"
 %include "various.i"

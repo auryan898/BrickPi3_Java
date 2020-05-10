@@ -49,8 +49,8 @@ public class BrickPi3 extends SWIG {
     return swigCPtr;
   }
 
-  public BrickPi3(SWIGTYPE_p_uint8_t addr) {
-    this(brickpiJNI.new_BrickPi3__SWIG_0(SWIGTYPE_p_uint8_t.getCPtr(addr)), true);
+  public BrickPi3(short addr) {
+    this(brickpiJNI.new_BrickPi3__SWIG_0(addr), true);
   }
 
   public BrickPi3() {
@@ -85,8 +85,8 @@ public class BrickPi3 extends SWIG {
     return brickpiJNI.BrickPi3_get_id(swigCPtr, this, str);
   }
 
-  public int set_led(SWIGTYPE_p_uint8_t value) {
-    return brickpiJNI.BrickPi3_set_led(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(value));
+  public int set_led(short value) {
+    return brickpiJNI.BrickPi3_set_led(swigCPtr, this, value);
   }
 
   public float get_voltage_3v3() {
@@ -121,72 +121,72 @@ public class BrickPi3 extends SWIG {
     return brickpiJNI.BrickPi3_get_voltage_battery__SWIG_1(swigCPtr, this, SWIGTYPE_p_float.getCPtr(voltage));
   }
 
-  public int set_sensor_type(SWIGTYPE_p_uint8_t port, SWIGTYPE_p_uint8_t type, SWIGTYPE_p_uint16_t flags, i2c_struct_t i2c_struct) {
-    return brickpiJNI.BrickPi3_set_sensor_type__SWIG_0(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port), SWIGTYPE_p_uint8_t.getCPtr(type), SWIGTYPE_p_uint16_t.getCPtr(flags), i2c_struct_t.getCPtr(i2c_struct), i2c_struct);
+  public int set_sensor_type(short port, short type, int flags, i2c_struct_t i2c_struct) {
+    return brickpiJNI.BrickPi3_set_sensor_type__SWIG_0(swigCPtr, this, port, type, flags, i2c_struct_t.getCPtr(i2c_struct), i2c_struct);
   }
 
-  public int set_sensor_type(SWIGTYPE_p_uint8_t port, SWIGTYPE_p_uint8_t type, SWIGTYPE_p_uint16_t flags) {
-    return brickpiJNI.BrickPi3_set_sensor_type__SWIG_1(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port), SWIGTYPE_p_uint8_t.getCPtr(type), SWIGTYPE_p_uint16_t.getCPtr(flags));
+  public int set_sensor_type(short port, short type, int flags) {
+    return brickpiJNI.BrickPi3_set_sensor_type__SWIG_1(swigCPtr, this, port, type, flags);
   }
 
-  public int set_sensor_type(SWIGTYPE_p_uint8_t port, SWIGTYPE_p_uint8_t type) {
-    return brickpiJNI.BrickPi3_set_sensor_type__SWIG_2(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port), SWIGTYPE_p_uint8_t.getCPtr(type));
+  public int set_sensor_type(short port, short type) {
+    return brickpiJNI.BrickPi3_set_sensor_type__SWIG_2(swigCPtr, this, port, type);
   }
 
-  public int transact_i2c(SWIGTYPE_p_uint8_t port, i2c_struct_t i2c_struct) {
-    return brickpiJNI.BrickPi3_transact_i2c(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port), i2c_struct_t.getCPtr(i2c_struct), i2c_struct);
+  public int transact_i2c(short port, i2c_struct_t i2c_struct) {
+    return brickpiJNI.BrickPi3_transact_i2c(swigCPtr, this, port, i2c_struct_t.getCPtr(i2c_struct), i2c_struct);
   }
 
-  public int get_sensor(SWIGTYPE_p_uint8_t port, SWIGTYPE_p_void value_ptr) {
-    return brickpiJNI.BrickPi3_get_sensor(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port), SWIGTYPE_p_void.getCPtr(value_ptr));
+  public int get_sensor(short port, SWIGTYPE_p_void value_ptr) {
+    return brickpiJNI.BrickPi3_get_sensor(swigCPtr, this, port, SWIGTYPE_p_void.getCPtr(value_ptr));
   }
 
-  public int set_motor_power(SWIGTYPE_p_uint8_t port, SWIGTYPE_p_int8_t power) {
-    return brickpiJNI.BrickPi3_set_motor_power(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port), SWIGTYPE_p_int8_t.getCPtr(power));
+  public int set_motor_power(short port, byte power) {
+    return brickpiJNI.BrickPi3_set_motor_power(swigCPtr, this, port, power);
   }
 
-  public int set_motor_position(SWIGTYPE_p_uint8_t port, SWIGTYPE_p_int32_t position) {
-    return brickpiJNI.BrickPi3_set_motor_position(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port), SWIGTYPE_p_int32_t.getCPtr(position));
+  public int set_motor_position(short port, int position) {
+    return brickpiJNI.BrickPi3_set_motor_position(swigCPtr, this, port, position);
   }
 
-  public int set_motor_position_relative(SWIGTYPE_p_uint8_t port, SWIGTYPE_p_int32_t position) {
-    return brickpiJNI.BrickPi3_set_motor_position_relative(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port), SWIGTYPE_p_int32_t.getCPtr(position));
+  public int set_motor_position_relative(short port, int position) {
+    return brickpiJNI.BrickPi3_set_motor_position_relative(swigCPtr, this, port, position);
   }
 
-  public int set_motor_dps(SWIGTYPE_p_uint8_t port, SWIGTYPE_p_int16_t dps) {
-    return brickpiJNI.BrickPi3_set_motor_dps(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port), SWIGTYPE_p_int16_t.getCPtr(dps));
+  public int set_motor_dps(short port, short dps) {
+    return brickpiJNI.BrickPi3_set_motor_dps(swigCPtr, this, port, dps);
   }
 
-  public int set_motor_limits(SWIGTYPE_p_uint8_t port, SWIGTYPE_p_uint8_t power, SWIGTYPE_p_uint16_t dps) {
-    return brickpiJNI.BrickPi3_set_motor_limits(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port), SWIGTYPE_p_uint8_t.getCPtr(power), SWIGTYPE_p_uint16_t.getCPtr(dps));
+  public int set_motor_limits(short port, short power, int dps) {
+    return brickpiJNI.BrickPi3_set_motor_limits(swigCPtr, this, port, power, dps);
   }
 
-  public int get_motor_status(SWIGTYPE_p_uint8_t port, SWIGTYPE_p_uint8_t state, SWIGTYPE_p_int8_t power, SWIGTYPE_p_int32_t position, SWIGTYPE_p_int16_t dps) {
-    return brickpiJNI.BrickPi3_get_motor_status(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port), SWIGTYPE_p_uint8_t.getCPtr(state), SWIGTYPE_p_int8_t.getCPtr(power), SWIGTYPE_p_int32_t.getCPtr(position), SWIGTYPE_p_int16_t.getCPtr(dps));
+  public int get_motor_status(short port, SWIGTYPE_p_unsigned_char state, SWIGTYPE_p_signed_char power, SWIGTYPE_p_int position, SWIGTYPE_p_short dps) {
+    return brickpiJNI.BrickPi3_get_motor_status(swigCPtr, this, port, SWIGTYPE_p_unsigned_char.getCPtr(state), SWIGTYPE_p_signed_char.getCPtr(power), SWIGTYPE_p_int.getCPtr(position), SWIGTYPE_p_short.getCPtr(dps));
   }
 
-  public int offset_motor_encoder(SWIGTYPE_p_uint8_t port, SWIGTYPE_p_int32_t position) {
-    return brickpiJNI.BrickPi3_offset_motor_encoder(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port), SWIGTYPE_p_int32_t.getCPtr(position));
+  public int offset_motor_encoder(short port, int position) {
+    return brickpiJNI.BrickPi3_offset_motor_encoder(swigCPtr, this, port, position);
   }
 
-  public int reset_motor_encoder(SWIGTYPE_p_uint8_t port, SWIGTYPE_p_int32_t value) {
-    return brickpiJNI.BrickPi3_reset_motor_encoder__SWIG_0(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port), SWIGTYPE_p_int32_t.getCPtr(value));
+  public int reset_motor_encoder(short port, SWIGTYPE_p_int value) {
+    return brickpiJNI.BrickPi3_reset_motor_encoder__SWIG_0(swigCPtr, this, port, SWIGTYPE_p_int.getCPtr(value));
   }
 
-  public int reset_motor_encoder(SWIGTYPE_p_uint8_t port) {
-    return brickpiJNI.BrickPi3_reset_motor_encoder__SWIG_1(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port));
+  public int reset_motor_encoder(short port) {
+    return brickpiJNI.BrickPi3_reset_motor_encoder__SWIG_1(swigCPtr, this, port);
   }
 
-  public int set_motor_encoder(SWIGTYPE_p_uint8_t port, SWIGTYPE_p_int32_t value) {
-    return brickpiJNI.BrickPi3_set_motor_encoder(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port), SWIGTYPE_p_int32_t.getCPtr(value));
+  public int set_motor_encoder(short port, int value) {
+    return brickpiJNI.BrickPi3_set_motor_encoder(swigCPtr, this, port, value);
   }
 
-  public int get_motor_encoder(SWIGTYPE_p_uint8_t port, SWIGTYPE_p_int32_t value) {
-    return brickpiJNI.BrickPi3_get_motor_encoder__SWIG_0(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port), SWIGTYPE_p_int32_t.getCPtr(value));
+  public int get_motor_encoder(short port, SWIGTYPE_p_int value) {
+    return brickpiJNI.BrickPi3_get_motor_encoder__SWIG_0(swigCPtr, this, port, SWIGTYPE_p_int.getCPtr(value));
   }
 
-  public SWIGTYPE_p_int32_t get_motor_encoder(SWIGTYPE_p_uint8_t port) {
-    return new SWIGTYPE_p_int32_t(brickpiJNI.BrickPi3_get_motor_encoder__SWIG_1(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(port)), true);
+  public int get_motor_encoder(short port) {
+    return brickpiJNI.BrickPi3_get_motor_encoder__SWIG_1(swigCPtr, this, port);
   }
 
   public int reset_all() {
