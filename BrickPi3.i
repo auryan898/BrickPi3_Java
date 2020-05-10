@@ -19,6 +19,18 @@
   $1 = $input;
 }
 
+%typemap(javacode) SWIGTYPE %{
+  public boolean equals(Object obj) {
+    boolean equal = false;
+    if (obj instanceof $javaclassname)
+      equal = ((($javaclassname)obj).swigCPtr == this.swigCPtr);
+    return equal;
+  }
+  public int hashCode() {
+    return (int)getPointer();
+  }
+%}
+
 %include "BrickPi3.h"
 %pointer_functions(float, floatp);
 %pointer_functions(int16_t,int16_tp);

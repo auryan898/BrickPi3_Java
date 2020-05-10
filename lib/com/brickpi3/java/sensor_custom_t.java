@@ -36,6 +36,16 @@ public class sensor_custom_t {
     }
   }
 
+  public boolean equals(Object obj) {
+    boolean equal = false;
+    if (obj instanceof sensor_custom_t)
+      equal = (((sensor_custom_t)obj).swigCPtr == this.swigCPtr);
+    return equal;
+  }
+  public int hashCode() {
+    return (int)getPointer();
+  }
+
   public void setAdc1(SWIGTYPE_p_uint16_t value) {
     brickpiJNI.sensor_custom_t_adc1_set(swigCPtr, this, SWIGTYPE_p_uint16_t.getCPtr(value));
   }

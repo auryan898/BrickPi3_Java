@@ -36,6 +36,16 @@ public class sensor_color_t {
     }
   }
 
+  public boolean equals(Object obj) {
+    boolean equal = false;
+    if (obj instanceof sensor_color_t)
+      equal = (((sensor_color_t)obj).swigCPtr == this.swigCPtr);
+    return equal;
+  }
+  public int hashCode() {
+    return (int)getPointer();
+  }
+
   public void setColor(SWIGTYPE_p_int8_t value) {
     brickpiJNI.sensor_color_t_color_set(swigCPtr, this, SWIGTYPE_p_int8_t.getCPtr(value));
   }

@@ -36,6 +36,16 @@ public class sensor_light_t {
     }
   }
 
+  public boolean equals(Object obj) {
+    boolean equal = false;
+    if (obj instanceof sensor_light_t)
+      equal = (((sensor_light_t)obj).swigCPtr == this.swigCPtr);
+    return equal;
+  }
+  public int hashCode() {
+    return (int)getPointer();
+  }
+
   public void setAmbient(SWIGTYPE_p_int16_t value) {
     brickpiJNI.sensor_light_t_ambient_set(swigCPtr, this, SWIGTYPE_p_int16_t.getCPtr(value));
   }

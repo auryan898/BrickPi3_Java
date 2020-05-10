@@ -36,6 +36,16 @@ public class sensor_ultrasonic_t {
     }
   }
 
+  public boolean equals(Object obj) {
+    boolean equal = false;
+    if (obj instanceof sensor_ultrasonic_t)
+      equal = (((sensor_ultrasonic_t)obj).swigCPtr == this.swigCPtr);
+    return equal;
+  }
+  public int hashCode() {
+    return (int)getPointer();
+  }
+
   public void setCm(float value) {
     brickpiJNI.sensor_ultrasonic_t_cm_set(swigCPtr, this, value);
   }

@@ -36,6 +36,16 @@ public class sensor_gyro_t {
     }
   }
 
+  public boolean equals(Object obj) {
+    boolean equal = false;
+    if (obj instanceof sensor_gyro_t)
+      equal = (((sensor_gyro_t)obj).swigCPtr == this.swigCPtr);
+    return equal;
+  }
+  public int hashCode() {
+    return (int)getPointer();
+  }
+
   public void setAbs(SWIGTYPE_p_int16_t value) {
     brickpiJNI.sensor_gyro_t_abs_set(swigCPtr, this, SWIGTYPE_p_int16_t.getCPtr(value));
   }

@@ -36,6 +36,16 @@ public class BrickPi3 {
     }
   }
 
+  public boolean equals(Object obj) {
+    boolean equal = false;
+    if (obj instanceof BrickPi3)
+      equal = (((BrickPi3)obj).swigCPtr == this.swigCPtr);
+    return equal;
+  }
+  public int hashCode() {
+    return (int)getPointer();
+  }
+
   public BrickPi3(SWIGTYPE_p_uint8_t addr) {
     this(brickpiJNI.new_BrickPi3__SWIG_0(SWIGTYPE_p_uint8_t.getCPtr(addr)), true);
   }

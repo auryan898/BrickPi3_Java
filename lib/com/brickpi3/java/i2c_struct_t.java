@@ -36,6 +36,16 @@ public class i2c_struct_t {
     }
   }
 
+  public boolean equals(Object obj) {
+    boolean equal = false;
+    if (obj instanceof i2c_struct_t)
+      equal = (((i2c_struct_t)obj).swigCPtr == this.swigCPtr);
+    return equal;
+  }
+  public int hashCode() {
+    return (int)getPointer();
+  }
+
   public void setSpeed(SWIGTYPE_p_uint8_t value) {
     brickpiJNI.i2c_struct_t_speed_set(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(value));
   }

@@ -36,6 +36,16 @@ public class sensor_touch_t {
     }
   }
 
+  public boolean equals(Object obj) {
+    boolean equal = false;
+    if (obj instanceof sensor_touch_t)
+      equal = (((sensor_touch_t)obj).swigCPtr == this.swigCPtr);
+    return equal;
+  }
+  public int hashCode() {
+    return (int)getPointer();
+  }
+
   public void setPressed(boolean value) {
     brickpiJNI.sensor_touch_t_pressed_set(swigCPtr, this, value);
   }
