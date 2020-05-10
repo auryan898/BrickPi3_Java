@@ -12,7 +12,14 @@ package com.brickpi3.java;
 
 public class brickpiJNI {
   static {
-    boolean debug = System.getProperty("debug").equalsIgnoreCase("true");
+    boolean debug;
+    try {
+      debug = "true".equalsIgnoreCase(System.getProperty("debug"));
+    } catch (NullPointerException e) {
+      debug = false;
+    }
+    if (debug)
+      System.out.println("DEBUG ON");
     boolean loaded = false;
     Throwable[] errors = new Throwable[4];
 
