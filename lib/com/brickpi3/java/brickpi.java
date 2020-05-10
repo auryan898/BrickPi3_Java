@@ -79,6 +79,72 @@ public class brickpi implements brickpiConstants {
     return brickpiJNI.floatp_value(SWIGTYPE_p_float.getCPtr(obj));
   }
 
+  public static SWIGTYPE_p_short new_shortp() {
+    long cPtr = brickpiJNI.new_shortp();
+    return (cPtr == 0) ? null : new SWIGTYPE_p_short(cPtr, false);
+  }
+
+  public static SWIGTYPE_p_short copy_shortp(short value) {
+    long cPtr = brickpiJNI.copy_shortp(value);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_short(cPtr, false);
+  }
+
+  public static void delete_shortp(SWIGTYPE_p_short obj) {
+    brickpiJNI.delete_shortp(SWIGTYPE_p_short.getCPtr(obj));
+  }
+
+  public static void shortp_assign(SWIGTYPE_p_short obj, short value) {
+    brickpiJNI.shortp_assign(SWIGTYPE_p_short.getCPtr(obj), value);
+  }
+
+  public static short shortp_value(SWIGTYPE_p_short obj) {
+    return brickpiJNI.shortp_value(SWIGTYPE_p_short.getCPtr(obj));
+  }
+
+  public static SWIGTYPE_p_long new_longp() {
+    long cPtr = brickpiJNI.new_longp();
+    return (cPtr == 0) ? null : new SWIGTYPE_p_long(cPtr, false);
+  }
+
+  public static SWIGTYPE_p_long copy_longp(int value) {
+    long cPtr = brickpiJNI.copy_longp(value);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_long(cPtr, false);
+  }
+
+  public static void delete_longp(SWIGTYPE_p_long obj) {
+    brickpiJNI.delete_longp(SWIGTYPE_p_long.getCPtr(obj));
+  }
+
+  public static void longp_assign(SWIGTYPE_p_long obj, int value) {
+    brickpiJNI.longp_assign(SWIGTYPE_p_long.getCPtr(obj), value);
+  }
+
+  public static int longp_value(SWIGTYPE_p_long obj) {
+    return brickpiJNI.longp_value(SWIGTYPE_p_long.getCPtr(obj));
+  }
+
+  public static SWIGTYPE_p_int new_intp() {
+    long cPtr = brickpiJNI.new_intp();
+    return (cPtr == 0) ? null : new SWIGTYPE_p_int(cPtr, false);
+  }
+
+  public static SWIGTYPE_p_int copy_intp(int value) {
+    long cPtr = brickpiJNI.copy_intp(value);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_int(cPtr, false);
+  }
+
+  public static void delete_intp(SWIGTYPE_p_int obj) {
+    brickpiJNI.delete_intp(SWIGTYPE_p_int.getCPtr(obj));
+  }
+
+  public static void intp_assign(SWIGTYPE_p_int obj, int value) {
+    brickpiJNI.intp_assign(SWIGTYPE_p_int.getCPtr(obj), value);
+  }
+
+  public static int intp_value(SWIGTYPE_p_int obj) {
+    return brickpiJNI.intp_value(SWIGTYPE_p_int.getCPtr(obj));
+  }
+
   public static SWIGTYPE_p_short new_int16_tp() {
     long cPtr = brickpiJNI.new_int16_tp();
     return (cPtr == 0) ? null : new SWIGTYPE_p_short(cPtr, false);

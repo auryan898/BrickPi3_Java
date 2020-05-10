@@ -35,6 +35,9 @@
 
 %include "BrickPi3.h"
 %pointer_functions(float, floatp);
+%pointer_functions(short,shortp);
+%pointer_functions(long, longp);
+%pointer_functions(int, intp);
 %pointer_functions(int16_t,int16_tp);
 %pointer_functions(int32_t,int32_tp);
 %pointer_functions(int8_t,int8_tp);
