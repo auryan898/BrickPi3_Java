@@ -9,6 +9,11 @@
 package com.brickpi3.java;
 
 public class brickpiJNI {
+
+  static {
+    com.brickpi3.java.LibraryExtractionHelper.loadBrickPiLibrary();
+  }
+
   public final static native String FIRMWARE_VERSION_REQUIRED_get();
   public final static native int LONGEST_SPI_TRANSFER_get();
   public final static native int LONGEST_I2C_TRANSFER_get();
