@@ -21,6 +21,94 @@ public interface brickpiConstants {
   public final static int ERROR_WRONG_DEVICE = brickpiJNI.ERROR_WRONG_DEVICE_get();
   public final static int ERROR_FIRMWARE_MISMATCH = brickpiJNI.ERROR_FIRMWARE_MISMATCH_get();
   public final static int ERROR_SENSOR_TYPE_MISMATCH = brickpiJNI.ERROR_SENSOR_TYPE_MISMATCH_get();
+  // BPSPI_MESSAGE_TYPE 
+  public final static int BPSPI_MESSAGE_NONE = brickpiJNI.BPSPI_MESSAGE_NONE_get();
+  public final static int BPSPI_MESSAGE_GET_MANUFACTURER = brickpiJNI.BPSPI_MESSAGE_GET_MANUFACTURER_get();
+  public final static int BPSPI_MESSAGE_GET_NAME = brickpiJNI.BPSPI_MESSAGE_GET_NAME_get();
+  public final static int BPSPI_MESSAGE_GET_HARDWARE_VERSION = brickpiJNI.BPSPI_MESSAGE_GET_HARDWARE_VERSION_get();
+  public final static int BPSPI_MESSAGE_GET_FIRMWARE_VERSION = brickpiJNI.BPSPI_MESSAGE_GET_FIRMWARE_VERSION_get();
+  public final static int BPSPI_MESSAGE_GET_ID = brickpiJNI.BPSPI_MESSAGE_GET_ID_get();
+  public final static int BPSPI_MESSAGE_SET_LED = brickpiJNI.BPSPI_MESSAGE_SET_LED_get();
+  public final static int BPSPI_MESSAGE_GET_VOLTAGE_3V3 = brickpiJNI.BPSPI_MESSAGE_GET_VOLTAGE_3V3_get();
+  public final static int BPSPI_MESSAGE_GET_VOLTAGE_5V = brickpiJNI.BPSPI_MESSAGE_GET_VOLTAGE_5V_get();
+  public final static int BPSPI_MESSAGE_GET_VOLTAGE_9V = brickpiJNI.BPSPI_MESSAGE_GET_VOLTAGE_9V_get();
+  public final static int BPSPI_MESSAGE_GET_VOLTAGE_VCC = brickpiJNI.BPSPI_MESSAGE_GET_VOLTAGE_VCC_get();
+  public final static int BPSPI_MESSAGE_SET_ADDRESS = brickpiJNI.BPSPI_MESSAGE_SET_ADDRESS_get();
+  public final static int BPSPI_MESSAGE_SET_SENSOR_TYPE = brickpiJNI.BPSPI_MESSAGE_SET_SENSOR_TYPE_get();
+  public final static int BPSPI_MESSAGE_GET_SENSOR_1 = brickpiJNI.BPSPI_MESSAGE_GET_SENSOR_1_get();
+  public final static int BPSPI_MESSAGE_GET_SENSOR_2 = brickpiJNI.BPSPI_MESSAGE_GET_SENSOR_2_get();
+  public final static int BPSPI_MESSAGE_GET_SENSOR_3 = brickpiJNI.BPSPI_MESSAGE_GET_SENSOR_3_get();
+  public final static int BPSPI_MESSAGE_GET_SENSOR_4 = brickpiJNI.BPSPI_MESSAGE_GET_SENSOR_4_get();
+  public final static int BPSPI_MESSAGE_I2C_TRANSACT_1 = brickpiJNI.BPSPI_MESSAGE_I2C_TRANSACT_1_get();
+  public final static int BPSPI_MESSAGE_I2C_TRANSACT_2 = brickpiJNI.BPSPI_MESSAGE_I2C_TRANSACT_2_get();
+  public final static int BPSPI_MESSAGE_I2C_TRANSACT_3 = brickpiJNI.BPSPI_MESSAGE_I2C_TRANSACT_3_get();
+  public final static int BPSPI_MESSAGE_I2C_TRANSACT_4 = brickpiJNI.BPSPI_MESSAGE_I2C_TRANSACT_4_get();
+  public final static int BPSPI_MESSAGE_SET_MOTOR_POWER = brickpiJNI.BPSPI_MESSAGE_SET_MOTOR_POWER_get();
+  public final static int BPSPI_MESSAGE_SET_MOTOR_POSITION = brickpiJNI.BPSPI_MESSAGE_SET_MOTOR_POSITION_get();
+  public final static int BPSPI_MESSAGE_SET_MOTOR_POSITION_KP = brickpiJNI.BPSPI_MESSAGE_SET_MOTOR_POSITION_KP_get();
+  public final static int BPSPI_MESSAGE_SET_MOTOR_POSITION_KD = brickpiJNI.BPSPI_MESSAGE_SET_MOTOR_POSITION_KD_get();
+  public final static int BPSPI_MESSAGE_SET_MOTOR_DPS = brickpiJNI.BPSPI_MESSAGE_SET_MOTOR_DPS_get();
+  public final static int BPSPI_MESSAGE_SET_MOTOR_DPS_KP = brickpiJNI.BPSPI_MESSAGE_SET_MOTOR_DPS_KP_get();
+  public final static int BPSPI_MESSAGE_SET_MOTOR_DPS_KD = brickpiJNI.BPSPI_MESSAGE_SET_MOTOR_DPS_KD_get();
+  public final static int BPSPI_MESSAGE_SET_MOTOR_LIMITS = brickpiJNI.BPSPI_MESSAGE_SET_MOTOR_LIMITS_get();
+  public final static int BPSPI_MESSAGE_OFFSET_MOTOR_ENCODER = brickpiJNI.BPSPI_MESSAGE_OFFSET_MOTOR_ENCODER_get();
+  public final static int BPSPI_MESSAGE_GET_MOTOR_A_ENCODER = brickpiJNI.BPSPI_MESSAGE_GET_MOTOR_A_ENCODER_get();
+  public final static int BPSPI_MESSAGE_GET_MOTOR_B_ENCODER = brickpiJNI.BPSPI_MESSAGE_GET_MOTOR_B_ENCODER_get();
+  public final static int BPSPI_MESSAGE_GET_MOTOR_C_ENCODER = brickpiJNI.BPSPI_MESSAGE_GET_MOTOR_C_ENCODER_get();
+  public final static int BPSPI_MESSAGE_GET_MOTOR_D_ENCODER = brickpiJNI.BPSPI_MESSAGE_GET_MOTOR_D_ENCODER_get();
+  public final static int BPSPI_MESSAGE_GET_MOTOR_A_STATUS = brickpiJNI.BPSPI_MESSAGE_GET_MOTOR_A_STATUS_get();
+  public final static int BPSPI_MESSAGE_GET_MOTOR_B_STATUS = brickpiJNI.BPSPI_MESSAGE_GET_MOTOR_B_STATUS_get();
+  public final static int BPSPI_MESSAGE_GET_MOTOR_C_STATUS = brickpiJNI.BPSPI_MESSAGE_GET_MOTOR_C_STATUS_get();
+  public final static int BPSPI_MESSAGE_GET_MOTOR_D_STATUS = brickpiJNI.BPSPI_MESSAGE_GET_MOTOR_D_STATUS_get();
+
+  // SENSOR_TYPE 
+  public final static int SENSOR_TYPE_NONE = brickpiJNI.SENSOR_TYPE_NONE_get();
+  public final static int SENSOR_TYPE_I2C = brickpiJNI.SENSOR_TYPE_I2C_get();
+  public final static int SENSOR_TYPE_CUSTOM = brickpiJNI.SENSOR_TYPE_CUSTOM_get();
+  public final static int SENSOR_TYPE_TOUCH = brickpiJNI.SENSOR_TYPE_TOUCH_get();
+  public final static int SENSOR_TYPE_TOUCH_NXT = brickpiJNI.SENSOR_TYPE_TOUCH_NXT_get();
+  public final static int SENSOR_TYPE_TOUCH_EV3 = brickpiJNI.SENSOR_TYPE_TOUCH_EV3_get();
+  public final static int SENSOR_TYPE_NXT_LIGHT_ON = brickpiJNI.SENSOR_TYPE_NXT_LIGHT_ON_get();
+  public final static int SENSOR_TYPE_NXT_LIGHT_OFF = brickpiJNI.SENSOR_TYPE_NXT_LIGHT_OFF_get();
+  public final static int SENSOR_TYPE_NXT_COLOR_RED = brickpiJNI.SENSOR_TYPE_NXT_COLOR_RED_get();
+  public final static int SENSOR_TYPE_NXT_COLOR_GREEN = brickpiJNI.SENSOR_TYPE_NXT_COLOR_GREEN_get();
+  public final static int SENSOR_TYPE_NXT_COLOR_BLUE = brickpiJNI.SENSOR_TYPE_NXT_COLOR_BLUE_get();
+  public final static int SENSOR_TYPE_NXT_COLOR_FULL = brickpiJNI.SENSOR_TYPE_NXT_COLOR_FULL_get();
+  public final static int SENSOR_TYPE_NXT_COLOR_OFF = brickpiJNI.SENSOR_TYPE_NXT_COLOR_OFF_get();
+  public final static int SENSOR_TYPE_NXT_ULTRASONIC = brickpiJNI.SENSOR_TYPE_NXT_ULTRASONIC_get();
+  public final static int SENSOR_TYPE_EV3_GYRO_ABS = brickpiJNI.SENSOR_TYPE_EV3_GYRO_ABS_get();
+  public final static int SENSOR_TYPE_EV3_GYRO_DPS = brickpiJNI.SENSOR_TYPE_EV3_GYRO_DPS_get();
+  public final static int SENSOR_TYPE_EV3_GYRO_ABS_DPS = brickpiJNI.SENSOR_TYPE_EV3_GYRO_ABS_DPS_get();
+  public final static int SENSOR_TYPE_EV3_COLOR_REFLECTED = brickpiJNI.SENSOR_TYPE_EV3_COLOR_REFLECTED_get();
+  public final static int SENSOR_TYPE_EV3_COLOR_AMBIENT = brickpiJNI.SENSOR_TYPE_EV3_COLOR_AMBIENT_get();
+  public final static int SENSOR_TYPE_EV3_COLOR_COLOR = brickpiJNI.SENSOR_TYPE_EV3_COLOR_COLOR_get();
+  public final static int SENSOR_TYPE_EV3_COLOR_RAW_REFLECTED = brickpiJNI.SENSOR_TYPE_EV3_COLOR_RAW_REFLECTED_get();
+  public final static int SENSOR_TYPE_EV3_COLOR_COLOR_COMPONENTS = brickpiJNI.SENSOR_TYPE_EV3_COLOR_COLOR_COMPONENTS_get();
+  public final static int SENSOR_TYPE_EV3_ULTRASONIC_CM = brickpiJNI.SENSOR_TYPE_EV3_ULTRASONIC_CM_get();
+  public final static int SENSOR_TYPE_EV3_ULTRASONIC_INCHES = brickpiJNI.SENSOR_TYPE_EV3_ULTRASONIC_INCHES_get();
+  public final static int SENSOR_TYPE_EV3_ULTRASONIC_LISTEN = brickpiJNI.SENSOR_TYPE_EV3_ULTRASONIC_LISTEN_get();
+  public final static int SENSOR_TYPE_EV3_INFRARED_PROXIMITY = brickpiJNI.SENSOR_TYPE_EV3_INFRARED_PROXIMITY_get();
+  public final static int SENSOR_TYPE_EV3_INFRARED_SEEK = brickpiJNI.SENSOR_TYPE_EV3_INFRARED_SEEK_get();
+  public final static int SENSOR_TYPE_EV3_INFRARED_REMOTE = brickpiJNI.SENSOR_TYPE_EV3_INFRARED_REMOTE_get();
+
+  // SENSOR_STATE 
+  public final static int SENSOR_STATE_VALID_DATA = brickpiJNI.SENSOR_STATE_VALID_DATA_get();
+  public final static int SENSOR_STATE_NOT_CONFIGURED = brickpiJNI.SENSOR_STATE_NOT_CONFIGURED_get();
+  public final static int SENSOR_STATE_CONFIGURING = brickpiJNI.SENSOR_STATE_CONFIGURING_get();
+  public final static int SENSOR_STATE_NO_DATA = brickpiJNI.SENSOR_STATE_NO_DATA_get();
+  public final static int SENSOR_STATE_I2C_ERROR = brickpiJNI.SENSOR_STATE_I2C_ERROR_get();
+
+  // SENSOR_CONFIG_FLAGS 
+  public final static int SENSOR_CONFIG_I2C_MID_CLOCK = brickpiJNI.SENSOR_CONFIG_I2C_MID_CLOCK_get();
+  public final static int SENSOR_CONFIG_PIN_1_PULL = brickpiJNI.SENSOR_CONFIG_PIN_1_PULL_get();
+  public final static int SENSOR_CONFIG_I2C_REPEAT = brickpiJNI.SENSOR_CONFIG_I2C_REPEAT_get();
+  public final static int SENSOR_CONFIG_PIN_5_DIR = brickpiJNI.SENSOR_CONFIG_PIN_5_DIR_get();
+  public final static int SENSOR_CONFIG_PIN_5_STATE = brickpiJNI.SENSOR_CONFIG_PIN_5_STATE_get();
+  public final static int SENSOR_CONFIG_PIN_6_DIR = brickpiJNI.SENSOR_CONFIG_PIN_6_DIR_get();
+  public final static int SENSOR_CONFIG_PIN_6_STATE = brickpiJNI.SENSOR_CONFIG_PIN_6_STATE_get();
+  public final static int SENSOR_CONFIG_REPORT_1_ADC = brickpiJNI.SENSOR_CONFIG_REPORT_1_ADC_get();
+  public final static int SENSOR_CONFIG_REPORT_6_ADC = brickpiJNI.SENSOR_CONFIG_REPORT_6_ADC_get();
+
   public final static int PORT_1 = brickpiJNI.PORT_1_get();
   public final static int PORT_2 = brickpiJNI.PORT_2_get();
   public final static int PORT_3 = brickpiJNI.PORT_3_get();

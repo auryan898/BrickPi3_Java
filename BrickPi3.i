@@ -10,7 +10,12 @@
   }
 %}
 
+%include "enumsimple.swg"
 
-%include various.i
+%include "various.i"
+%include "arrays_java.i"
+%typemap(in) uint8_t {
+  $1 = $input;
+}
 
 %include "BrickPi3.h"
