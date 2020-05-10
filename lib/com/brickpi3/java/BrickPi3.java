@@ -65,23 +65,23 @@ public class BrickPi3 extends SWIG {
     return brickpiJNI.BrickPi3_detect__SWIG_1(swigCPtr, this);
   }
 
-  public int get_manufacturer(String str) {
+  public int get_manufacturer(byte[] str) {
     return brickpiJNI.BrickPi3_get_manufacturer(swigCPtr, this, str);
   }
 
-  public int get_board(String str) {
+  public int get_board(byte[] str) {
     return brickpiJNI.BrickPi3_get_board(swigCPtr, this, str);
   }
 
-  public int get_version_hardware(String str) {
+  public int get_version_hardware(byte[] str) {
     return brickpiJNI.BrickPi3_get_version_hardware(swigCPtr, this, str);
   }
 
-  public int get_version_firmware(String str) {
+  public int get_version_firmware(byte[] str) {
     return brickpiJNI.BrickPi3_get_version_firmware(swigCPtr, this, str);
   }
 
-  public int get_id(String str) {
+  public int get_id(byte[] str) {
     return brickpiJNI.BrickPi3_get_id(swigCPtr, this, str);
   }
 

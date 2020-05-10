@@ -9,12 +9,12 @@
     com.brickpi3.java.LibraryExtractionHelper.loadBrickPiLibrary();
   }
 %}
-
+%include "arrays_java.i"
 %include "stdint.i"
 %include "enumsimple.swg"
 %include "cpointer.i"
 %include "various.i"
-%include "arrays_java.i"
+
 
 %typemap(javabase) SWIGTYPE, SWIGTYPE *, SWIGTYPE &, SWIGTYPE [], SWIGTYPE (CLASS::*) "SWIG"
 
@@ -32,6 +32,8 @@
     return swigCPtr;
   }
 %}
+
+%apply char *BYTE {char * str};
 
 %include "BrickPi3.h"
 %pointer_functions(float, floatp);

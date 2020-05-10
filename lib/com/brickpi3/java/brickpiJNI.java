@@ -208,11 +208,11 @@ public class brickpiJNI {
   public final static native long new_BrickPi3__SWIG_1();
   public final static native int BrickPi3_detect__SWIG_0(long jarg1, BrickPi3 jarg1_, boolean jarg2);
   public final static native int BrickPi3_detect__SWIG_1(long jarg1, BrickPi3 jarg1_);
-  public final static native int BrickPi3_get_manufacturer(long jarg1, BrickPi3 jarg1_, String jarg2);
-  public final static native int BrickPi3_get_board(long jarg1, BrickPi3 jarg1_, String jarg2);
-  public final static native int BrickPi3_get_version_hardware(long jarg1, BrickPi3 jarg1_, String jarg2);
-  public final static native int BrickPi3_get_version_firmware(long jarg1, BrickPi3 jarg1_, String jarg2);
-  public final static native int BrickPi3_get_id(long jarg1, BrickPi3 jarg1_, String jarg2);
+  public final static native int BrickPi3_get_manufacturer(long jarg1, BrickPi3 jarg1_, byte[] jarg2);
+  public final static native int BrickPi3_get_board(long jarg1, BrickPi3 jarg1_, byte[] jarg2);
+  public final static native int BrickPi3_get_version_hardware(long jarg1, BrickPi3 jarg1_, byte[] jarg2);
+  public final static native int BrickPi3_get_version_firmware(long jarg1, BrickPi3 jarg1_, byte[] jarg2);
+  public final static native int BrickPi3_get_id(long jarg1, BrickPi3 jarg1_, byte[] jarg2);
   public final static native int BrickPi3_set_led(long jarg1, BrickPi3 jarg1_, short jarg2);
   public final static native float BrickPi3_get_voltage_3v3__SWIG_0(long jarg1, BrickPi3 jarg1_);
   public final static native float BrickPi3_get_voltage_5v__SWIG_0(long jarg1, BrickPi3 jarg1_);
