@@ -8,7 +8,7 @@
 
 package com.brickpi3.java;
 
-public class i2c_struct_t {
+public class i2c_struct_t extends SWIG {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
@@ -36,7 +36,7 @@ public class i2c_struct_t {
     }
   }
 
-  public boolean equals(Object obj) {
+   public boolean equals(Object obj) {
     boolean equal = false;
     if (obj instanceof i2c_struct_t)
       equal = (((i2c_struct_t)obj).swigCPtr == this.swigCPtr);
@@ -44,6 +44,9 @@ public class i2c_struct_t {
   }
   public int hashCode() {
     return (int)swigCPtr;
+  }
+  protected long getPointer() {
+    return swigCPtr;
   }
 
   public void setSpeed(SWIGTYPE_p_uint8_t value) {

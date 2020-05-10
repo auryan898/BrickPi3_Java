@@ -271,4 +271,9 @@ public class brickpiJNI {
   public final static native void delete_uint8_tp(long jarg1);
   public final static native void uint8_tp_assign(long jarg1, long jarg2);
   public final static native long uint8_tp_value(long jarg1);
+  public final static native long new_spi_ioc_transferp();
+  public final static native long copy_spi_ioc_transferp(long jarg1);
+  public final static native void delete_spi_ioc_transferp(long jarg1);
+  public final static native void spi_ioc_transferp_assign(long jarg1, long jarg2);
+  public final static native long spi_ioc_transferp_value(long jarg1);
 }

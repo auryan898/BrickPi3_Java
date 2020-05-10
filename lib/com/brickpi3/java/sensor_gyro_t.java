@@ -8,7 +8,7 @@
 
 package com.brickpi3.java;
 
-public class sensor_gyro_t {
+public class sensor_gyro_t extends SWIG {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
@@ -36,7 +36,7 @@ public class sensor_gyro_t {
     }
   }
 
-  public boolean equals(Object obj) {
+   public boolean equals(Object obj) {
     boolean equal = false;
     if (obj instanceof sensor_gyro_t)
       equal = (((sensor_gyro_t)obj).swigCPtr == this.swigCPtr);
@@ -44,6 +44,9 @@ public class sensor_gyro_t {
   }
   public int hashCode() {
     return (int)swigCPtr;
+  }
+  protected long getPointer() {
+    return swigCPtr;
   }
 
   public void setAbs(SWIGTYPE_p_int16_t value) {

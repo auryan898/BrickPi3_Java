@@ -19,8 +19,13 @@
   $1 = $input;
 }
 
-%typemap(javacode) SWIGTYPE %{
-  public boolean equals(Object obj) {
+
+%typemap(javabase) SWIGTYPE, SWIGTYPE *, SWIGTYPE &, SWIGTYPE [], 
+                                                         SWIGTYPE (CLASS::*) "SWIG"
+
+%typemap(javacode) SWIGTYPE, SWIGTYPE *, SWIGTYPE &, SWIGTYPE [], 
+                                                         SWIGTYPE (CLASS::*) %{
+   public boolean equals(Object obj) {
     boolean equal = false;
     if (obj instanceof $javaclassname)
       equal = ((($javaclassname)obj).swigCPtr == this.swigCPtr);
@@ -28,6 +33,9 @@
   }
   public int hashCode() {
     return (int)swigCPtr;
+  }
+  protected long getPointer() {
+    return swigCPtr;
   }
 %}
 
@@ -38,3 +46,4 @@
 %pointer_functions(int8_t,int8_tp);
 %pointer_functions(uint16_t,uint16_tp);
 %pointer_functions(uint8_t,uint8_tp);
+%pointer_functions(spi_ioc_transfer, spi_ioc_transferp);

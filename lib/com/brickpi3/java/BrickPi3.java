@@ -8,7 +8,7 @@
 
 package com.brickpi3.java;
 
-public class BrickPi3 {
+public class BrickPi3 extends SWIG {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
@@ -36,7 +36,7 @@ public class BrickPi3 {
     }
   }
 
-  public boolean equals(Object obj) {
+   public boolean equals(Object obj) {
     boolean equal = false;
     if (obj instanceof BrickPi3)
       equal = (((BrickPi3)obj).swigCPtr == this.swigCPtr);
@@ -44,6 +44,9 @@ public class BrickPi3 {
   }
   public int hashCode() {
     return (int)swigCPtr;
+  }
+  protected long getPointer() {
+    return swigCPtr;
   }
 
   public BrickPi3(SWIGTYPE_p_uint8_t addr) {

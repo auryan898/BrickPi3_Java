@@ -191,4 +191,26 @@ public class brickpi implements brickpiConstants {
     return new SWIGTYPE_p_uint8_t(brickpiJNI.uint8_tp_value(SWIGTYPE_p_uint8_t.getCPtr(obj)), true);
   }
 
+  public static SWIGTYPE_p_spi_ioc_transfer new_spi_ioc_transferp() {
+    long cPtr = brickpiJNI.new_spi_ioc_transferp();
+    return (cPtr == 0) ? null : new SWIGTYPE_p_spi_ioc_transfer(cPtr, false);
+  }
+
+  public static SWIGTYPE_p_spi_ioc_transfer copy_spi_ioc_transferp(SWIGTYPE_p_spi_ioc_transfer value) {
+    long cPtr = brickpiJNI.copy_spi_ioc_transferp(SWIGTYPE_p_spi_ioc_transfer.getCPtr(value));
+    return (cPtr == 0) ? null : new SWIGTYPE_p_spi_ioc_transfer(cPtr, false);
+  }
+
+  public static void delete_spi_ioc_transferp(SWIGTYPE_p_spi_ioc_transfer obj) {
+    brickpiJNI.delete_spi_ioc_transferp(SWIGTYPE_p_spi_ioc_transfer.getCPtr(obj));
+  }
+
+  public static void spi_ioc_transferp_assign(SWIGTYPE_p_spi_ioc_transfer obj, SWIGTYPE_p_spi_ioc_transfer value) {
+    brickpiJNI.spi_ioc_transferp_assign(SWIGTYPE_p_spi_ioc_transfer.getCPtr(obj), SWIGTYPE_p_spi_ioc_transfer.getCPtr(value));
+  }
+
+  public static SWIGTYPE_p_spi_ioc_transfer spi_ioc_transferp_value(SWIGTYPE_p_spi_ioc_transfer obj) {
+    return new SWIGTYPE_p_spi_ioc_transfer(brickpiJNI.spi_ioc_transferp_value(SWIGTYPE_p_spi_ioc_transfer.getCPtr(obj)), true);
+  }
+
 }
