@@ -27,7 +27,7 @@ public class PiInfraredSensor extends PiBaseSensor {
     return device.getDistance();
   }
 
-  public byte[] getRemote() {
+  public byte[] getHeading() {
     super.update();
     return device.getHeading();
   }
@@ -37,7 +37,7 @@ public class PiInfraredSensor extends PiBaseSensor {
     return device.getProximity();
   }
 
-  public short[] getSomething() {
+  public short[] getRemote() {
     super.update();
     return device.getRemote();
   }
