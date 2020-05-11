@@ -1,4 +1,4 @@
-package com.brickpi3.hardware;
+package com.brickpi3.java.hardware;
 
 import com.brickpi3.java.SWIGTYPE_p_int;
 import com.brickpi3.java.SWIGTYPE_p_short;
