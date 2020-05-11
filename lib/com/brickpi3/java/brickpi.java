@@ -145,114 +145,48 @@ public class brickpi implements brickpiConstants {
     return brickpiJNI.intp_value(SWIGTYPE_p_int.getCPtr(obj));
   }
 
-  public static SWIGTYPE_p_short new_int16_tp() {
-    long cPtr = brickpiJNI.new_int16_tp();
-    return (cPtr == 0) ? null : new SWIGTYPE_p_short(cPtr, false);
-  }
-
-  public static SWIGTYPE_p_short copy_int16_tp(short value) {
-    long cPtr = brickpiJNI.copy_int16_tp(value);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_short(cPtr, false);
-  }
-
-  public static void delete_int16_tp(SWIGTYPE_p_short obj) {
-    brickpiJNI.delete_int16_tp(SWIGTYPE_p_short.getCPtr(obj));
-  }
-
-  public static void int16_tp_assign(SWIGTYPE_p_short obj, short value) {
-    brickpiJNI.int16_tp_assign(SWIGTYPE_p_short.getCPtr(obj), value);
-  }
-
-  public static short int16_tp_value(SWIGTYPE_p_short obj) {
-    return brickpiJNI.int16_tp_value(SWIGTYPE_p_short.getCPtr(obj));
-  }
-
-  public static SWIGTYPE_p_int new_int32_tp() {
-    long cPtr = brickpiJNI.new_int32_tp();
-    return (cPtr == 0) ? null : new SWIGTYPE_p_int(cPtr, false);
-  }
-
-  public static SWIGTYPE_p_int copy_int32_tp(int value) {
-    long cPtr = brickpiJNI.copy_int32_tp(value);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_int(cPtr, false);
-  }
-
-  public static void delete_int32_tp(SWIGTYPE_p_int obj) {
-    brickpiJNI.delete_int32_tp(SWIGTYPE_p_int.getCPtr(obj));
-  }
-
-  public static void int32_tp_assign(SWIGTYPE_p_int obj, int value) {
-    brickpiJNI.int32_tp_assign(SWIGTYPE_p_int.getCPtr(obj), value);
-  }
-
-  public static int int32_tp_value(SWIGTYPE_p_int obj) {
-    return brickpiJNI.int32_tp_value(SWIGTYPE_p_int.getCPtr(obj));
-  }
-
-  public static SWIGTYPE_p_signed_char new_int8_tp() {
-    long cPtr = brickpiJNI.new_int8_tp();
+  public static SWIGTYPE_p_signed_char new_charp() {
+    long cPtr = brickpiJNI.new_charp();
     return (cPtr == 0) ? null : new SWIGTYPE_p_signed_char(cPtr, false);
   }
 
-  public static SWIGTYPE_p_signed_char copy_int8_tp(byte value) {
-    long cPtr = brickpiJNI.copy_int8_tp(value);
+  public static SWIGTYPE_p_signed_char copy_charp(byte value) {
+    long cPtr = brickpiJNI.copy_charp(value);
     return (cPtr == 0) ? null : new SWIGTYPE_p_signed_char(cPtr, false);
   }
 
-  public static void delete_int8_tp(SWIGTYPE_p_signed_char obj) {
-    brickpiJNI.delete_int8_tp(SWIGTYPE_p_signed_char.getCPtr(obj));
+  public static void delete_charp(SWIGTYPE_p_signed_char obj) {
+    brickpiJNI.delete_charp(SWIGTYPE_p_signed_char.getCPtr(obj));
   }
 
-  public static void int8_tp_assign(SWIGTYPE_p_signed_char obj, byte value) {
-    brickpiJNI.int8_tp_assign(SWIGTYPE_p_signed_char.getCPtr(obj), value);
+  public static void charp_assign(SWIGTYPE_p_signed_char obj, byte value) {
+    brickpiJNI.charp_assign(SWIGTYPE_p_signed_char.getCPtr(obj), value);
   }
 
-  public static byte int8_tp_value(SWIGTYPE_p_signed_char obj) {
-    return brickpiJNI.int8_tp_value(SWIGTYPE_p_signed_char.getCPtr(obj));
+  public static byte charp_value(SWIGTYPE_p_signed_char obj) {
+    return brickpiJNI.charp_value(SWIGTYPE_p_signed_char.getCPtr(obj));
   }
 
-  public static SWIGTYPE_p_unsigned_short new_uint16_tp() {
-    long cPtr = brickpiJNI.new_uint16_tp();
-    return (cPtr == 0) ? null : new SWIGTYPE_p_unsigned_short(cPtr, false);
-  }
-
-  public static SWIGTYPE_p_unsigned_short copy_uint16_tp(int value) {
-    long cPtr = brickpiJNI.copy_uint16_tp(value);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_unsigned_short(cPtr, false);
-  }
-
-  public static void delete_uint16_tp(SWIGTYPE_p_unsigned_short obj) {
-    brickpiJNI.delete_uint16_tp(SWIGTYPE_p_unsigned_short.getCPtr(obj));
-  }
-
-  public static void uint16_tp_assign(SWIGTYPE_p_unsigned_short obj, int value) {
-    brickpiJNI.uint16_tp_assign(SWIGTYPE_p_unsigned_short.getCPtr(obj), value);
-  }
-
-  public static int uint16_tp_value(SWIGTYPE_p_unsigned_short obj) {
-    return brickpiJNI.uint16_tp_value(SWIGTYPE_p_unsigned_short.getCPtr(obj));
-  }
-
-  public static SWIGTYPE_p_unsigned_char new_uint8_tp() {
-    long cPtr = brickpiJNI.new_uint8_tp();
+  public static SWIGTYPE_p_unsigned_char new_ucharp() {
+    long cPtr = brickpiJNI.new_ucharp();
     return (cPtr == 0) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
   }
 
-  public static SWIGTYPE_p_unsigned_char copy_uint8_tp(short value) {
-    long cPtr = brickpiJNI.copy_uint8_tp(value);
+  public static SWIGTYPE_p_unsigned_char copy_ucharp(short value) {
+    long cPtr = brickpiJNI.copy_ucharp(value);
     return (cPtr == 0) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
   }
 
-  public static void delete_uint8_tp(SWIGTYPE_p_unsigned_char obj) {
-    brickpiJNI.delete_uint8_tp(SWIGTYPE_p_unsigned_char.getCPtr(obj));
+  public static void delete_ucharp(SWIGTYPE_p_unsigned_char obj) {
+    brickpiJNI.delete_ucharp(SWIGTYPE_p_unsigned_char.getCPtr(obj));
   }
 
-  public static void uint8_tp_assign(SWIGTYPE_p_unsigned_char obj, short value) {
-    brickpiJNI.uint8_tp_assign(SWIGTYPE_p_unsigned_char.getCPtr(obj), value);
+  public static void ucharp_assign(SWIGTYPE_p_unsigned_char obj, short value) {
+    brickpiJNI.ucharp_assign(SWIGTYPE_p_unsigned_char.getCPtr(obj), value);
   }
 
-  public static short uint8_tp_value(SWIGTYPE_p_unsigned_char obj) {
-    return brickpiJNI.uint8_tp_value(SWIGTYPE_p_unsigned_char.getCPtr(obj));
+  public static short ucharp_value(SWIGTYPE_p_unsigned_char obj) {
+    return brickpiJNI.ucharp_value(SWIGTYPE_p_unsigned_char.getCPtr(obj));
   }
 
   public static SWIGTYPE_p_spi_ioc_transfer new_spi_ioc_transferp() {

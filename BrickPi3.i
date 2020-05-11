@@ -34,9 +34,6 @@
 %pointer_functions(short,shortp);
 %pointer_functions(long, longp);
 %pointer_functions(int, intp);
-%pointer_functions(int16_t,int16_tp);
-%pointer_functions(int32_t,int32_tp);
-%pointer_functions(int8_t,int8_tp);
-%pointer_functions(uint16_t,uint16_tp);
-%pointer_functions(uint8_t,uint8_tp);
+%pointer_functions(signed char, charp);
+%pointer_functions(unsigned char, ucharp);
 %pointer_functions(spi_ioc_transfer, spi_ioc_transferp);
