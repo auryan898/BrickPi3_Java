@@ -49,20 +49,20 @@ public class sensor_gyro_t extends SWIG {
     return swigCPtr;
   }
 
-  public void setAbs(SWIGTYPE_p_int16_t value) {
-    brickpiJNI.sensor_gyro_t_abs_set(swigCPtr, this, SWIGTYPE_p_int16_t.getCPtr(value));
+  public void setAbs(short value) {
+    brickpiJNI.sensor_gyro_t_abs_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_int16_t getAbs() {
-    return new SWIGTYPE_p_int16_t(brickpiJNI.sensor_gyro_t_abs_get(swigCPtr, this), true);
+  public short getAbs() {
+    return brickpiJNI.sensor_gyro_t_abs_get(swigCPtr, this);
   }
 
-  public void setDps(SWIGTYPE_p_int16_t value) {
-    brickpiJNI.sensor_gyro_t_dps_set(swigCPtr, this, SWIGTYPE_p_int16_t.getCPtr(value));
+  public void setDps(short value) {
+    brickpiJNI.sensor_gyro_t_dps_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_int16_t getDps() {
-    return new SWIGTYPE_p_int16_t(brickpiJNI.sensor_gyro_t_dps_get(swigCPtr, this), true);
+  public short getDps() {
+    return brickpiJNI.sensor_gyro_t_dps_get(swigCPtr, this);
   }
 
   public sensor_gyro_t() {

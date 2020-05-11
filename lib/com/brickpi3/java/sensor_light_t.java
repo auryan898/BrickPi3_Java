@@ -49,20 +49,20 @@ public class sensor_light_t extends SWIG {
     return swigCPtr;
   }
 
-  public void setAmbient(SWIGTYPE_p_int16_t value) {
-    brickpiJNI.sensor_light_t_ambient_set(swigCPtr, this, SWIGTYPE_p_int16_t.getCPtr(value));
+  public void setAmbient(short value) {
+    brickpiJNI.sensor_light_t_ambient_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_int16_t getAmbient() {
-    return new SWIGTYPE_p_int16_t(brickpiJNI.sensor_light_t_ambient_get(swigCPtr, this), true);
+  public short getAmbient() {
+    return brickpiJNI.sensor_light_t_ambient_get(swigCPtr, this);
   }
 
-  public void setReflected(SWIGTYPE_p_int16_t value) {
-    brickpiJNI.sensor_light_t_reflected_set(swigCPtr, this, SWIGTYPE_p_int16_t.getCPtr(value));
+  public void setReflected(short value) {
+    brickpiJNI.sensor_light_t_reflected_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_int16_t getReflected() {
-    return new SWIGTYPE_p_int16_t(brickpiJNI.sensor_light_t_reflected_get(swigCPtr, this), true);
+  public short getReflected() {
+    return brickpiJNI.sensor_light_t_reflected_get(swigCPtr, this);
   }
 
   public sensor_light_t() {

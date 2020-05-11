@@ -49,20 +49,20 @@ public class sensor_custom_t extends SWIG {
     return swigCPtr;
   }
 
-  public void setAdc1(SWIGTYPE_p_uint16_t value) {
-    brickpiJNI.sensor_custom_t_adc1_set(swigCPtr, this, SWIGTYPE_p_uint16_t.getCPtr(value));
+  public void setAdc1(int value) {
+    brickpiJNI.sensor_custom_t_adc1_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_uint16_t getAdc1() {
-    return new SWIGTYPE_p_uint16_t(brickpiJNI.sensor_custom_t_adc1_get(swigCPtr, this), true);
+  public int getAdc1() {
+    return brickpiJNI.sensor_custom_t_adc1_get(swigCPtr, this);
   }
 
-  public void setAdc6(SWIGTYPE_p_uint16_t value) {
-    brickpiJNI.sensor_custom_t_adc6_set(swigCPtr, this, SWIGTYPE_p_uint16_t.getCPtr(value));
+  public void setAdc6(int value) {
+    brickpiJNI.sensor_custom_t_adc6_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_uint16_t getAdc6() {
-    return new SWIGTYPE_p_uint16_t(brickpiJNI.sensor_custom_t_adc6_get(swigCPtr, this), true);
+  public int getAdc6() {
+    return brickpiJNI.sensor_custom_t_adc6_get(swigCPtr, this);
   }
 
   public void setPin5(boolean value) {
