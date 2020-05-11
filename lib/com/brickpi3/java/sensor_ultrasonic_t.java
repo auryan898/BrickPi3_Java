@@ -36,12 +36,6 @@ public class sensor_ultrasonic_t extends SWIG {
     }
   }
 
-  public boolean equals(Object obj) {
-  boolean equal = false;
-  if (obj instanceof sensor_ultrasonic_t)
-    equal = (((sensor_ultrasonic_t)obj).swigCPtr == this.swigCPtr);
-  return equal;
-  }
   public int hashCode() {
     return (int)swigCPtr;
   }

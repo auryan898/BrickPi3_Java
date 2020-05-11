@@ -23,12 +23,6 @@ public class SWIGTYPE_p_short extends SWIG {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
-  public boolean equals(Object obj) {
-  boolean equal = false;
-  if (obj instanceof SWIGTYPE_p_short)
-    equal = (((SWIGTYPE_p_short)obj).swigCPtr == this.swigCPtr);
-  return equal;
-  }
   public int hashCode() {
     return (int)swigCPtr;
   }
