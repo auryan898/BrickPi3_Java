@@ -36,12 +36,6 @@ public class BrickPi3 extends SWIG {
     }
   }
 
-  public boolean equals(Object obj) {
-  boolean equal = false;
-  if (obj instanceof BrickPi3)
-    equal = (((BrickPi3)obj).swigCPtr == this.swigCPtr);
-  return equal;
-  }
   public int hashCode() {
     return (int)swigCPtr;
   }
