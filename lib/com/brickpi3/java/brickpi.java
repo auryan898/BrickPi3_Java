@@ -25,30 +25,28 @@ public class brickpi implements brickpiConstants {
     return new SWIGTYPE_p_spi_ioc_transfer(brickpiJNI.spi_xfer_struct_get(), true);
   }
 
-  public static void setSpi_array_out(SWIGTYPE_p_uint8_t value) {
-    brickpiJNI.spi_array_out_set(SWIGTYPE_p_uint8_t.getCPtr(value));
+  public static void setSpi_array_out(short[] value) {
+    brickpiJNI.spi_array_out_set(value);
   }
 
-  public static SWIGTYPE_p_uint8_t getSpi_array_out() {
-    long cPtr = brickpiJNI.spi_array_out_get();
-    return (cPtr == 0) ? null : new SWIGTYPE_p_uint8_t(cPtr, false);
+  public static short[] getSpi_array_out() {
+    return brickpiJNI.spi_array_out_get();
   }
 
-  public static void setSpi_array_in(SWIGTYPE_p_uint8_t value) {
-    brickpiJNI.spi_array_in_set(SWIGTYPE_p_uint8_t.getCPtr(value));
+  public static void setSpi_array_in(short[] value) {
+    brickpiJNI.spi_array_in_set(value);
   }
 
-  public static SWIGTYPE_p_uint8_t getSpi_array_in() {
-    long cPtr = brickpiJNI.spi_array_in_get();
-    return (cPtr == 0) ? null : new SWIGTYPE_p_uint8_t(cPtr, false);
+  public static short[] getSpi_array_in() {
+    return brickpiJNI.spi_array_in_get();
   }
 
   public static int spi_setup() {
     return brickpiJNI.spi_setup();
   }
 
-  public static int spi_transfer_array(SWIGTYPE_p_uint8_t length, SWIGTYPE_p_uint8_t outArray, SWIGTYPE_p_uint8_t inArray) {
-    return brickpiJNI.spi_transfer_array(SWIGTYPE_p_uint8_t.getCPtr(length), SWIGTYPE_p_uint8_t.getCPtr(outArray), SWIGTYPE_p_uint8_t.getCPtr(inArray));
+  public static int spi_transfer_array(short length, SWIGTYPE_p_unsigned_char outArray, SWIGTYPE_p_unsigned_char inArray) {
+    return brickpiJNI.spi_transfer_array(length, SWIGTYPE_p_unsigned_char.getCPtr(outArray), SWIGTYPE_p_unsigned_char.getCPtr(inArray));
   }
 
   public static void fatal_error(String error) {
@@ -57,6 +55,138 @@ public class brickpi implements brickpiConstants {
 
   public static int BrickPi3_set_address(int addr, String id) {
     return brickpiJNI.BrickPi3_set_address(addr, id);
+  }
+
+  public static SWIGTYPE_p_float new_floatp() {
+    long cPtr = brickpiJNI.new_floatp();
+    return (cPtr == 0) ? null : new SWIGTYPE_p_float(cPtr, false);
+  }
+
+  public static SWIGTYPE_p_float copy_floatp(float value) {
+    long cPtr = brickpiJNI.copy_floatp(value);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_float(cPtr, false);
+  }
+
+  public static void delete_floatp(SWIGTYPE_p_float obj) {
+    brickpiJNI.delete_floatp(SWIGTYPE_p_float.getCPtr(obj));
+  }
+
+  public static void floatp_assign(SWIGTYPE_p_float obj, float value) {
+    brickpiJNI.floatp_assign(SWIGTYPE_p_float.getCPtr(obj), value);
+  }
+
+  public static float floatp_value(SWIGTYPE_p_float obj) {
+    return brickpiJNI.floatp_value(SWIGTYPE_p_float.getCPtr(obj));
+  }
+
+  public static SWIGTYPE_p_short new_shortp() {
+    long cPtr = brickpiJNI.new_shortp();
+    return (cPtr == 0) ? null : new SWIGTYPE_p_short(cPtr, false);
+  }
+
+  public static SWIGTYPE_p_short copy_shortp(short value) {
+    long cPtr = brickpiJNI.copy_shortp(value);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_short(cPtr, false);
+  }
+
+  public static void delete_shortp(SWIGTYPE_p_short obj) {
+    brickpiJNI.delete_shortp(SWIGTYPE_p_short.getCPtr(obj));
+  }
+
+  public static void shortp_assign(SWIGTYPE_p_short obj, short value) {
+    brickpiJNI.shortp_assign(SWIGTYPE_p_short.getCPtr(obj), value);
+  }
+
+  public static short shortp_value(SWIGTYPE_p_short obj) {
+    return brickpiJNI.shortp_value(SWIGTYPE_p_short.getCPtr(obj));
+  }
+
+  public static SWIGTYPE_p_int new_intp() {
+    long cPtr = brickpiJNI.new_intp();
+    return (cPtr == 0) ? null : new SWIGTYPE_p_int(cPtr, false);
+  }
+
+  public static SWIGTYPE_p_int copy_intp(int value) {
+    long cPtr = brickpiJNI.copy_intp(value);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_int(cPtr, false);
+  }
+
+  public static void delete_intp(SWIGTYPE_p_int obj) {
+    brickpiJNI.delete_intp(SWIGTYPE_p_int.getCPtr(obj));
+  }
+
+  public static void intp_assign(SWIGTYPE_p_int obj, int value) {
+    brickpiJNI.intp_assign(SWIGTYPE_p_int.getCPtr(obj), value);
+  }
+
+  public static int intp_value(SWIGTYPE_p_int obj) {
+    return brickpiJNI.intp_value(SWIGTYPE_p_int.getCPtr(obj));
+  }
+
+  public static SWIGTYPE_p_signed_char new_charp() {
+    long cPtr = brickpiJNI.new_charp();
+    return (cPtr == 0) ? null : new SWIGTYPE_p_signed_char(cPtr, false);
+  }
+
+  public static SWIGTYPE_p_signed_char copy_charp(byte value) {
+    long cPtr = brickpiJNI.copy_charp(value);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_signed_char(cPtr, false);
+  }
+
+  public static void delete_charp(SWIGTYPE_p_signed_char obj) {
+    brickpiJNI.delete_charp(SWIGTYPE_p_signed_char.getCPtr(obj));
+  }
+
+  public static void charp_assign(SWIGTYPE_p_signed_char obj, byte value) {
+    brickpiJNI.charp_assign(SWIGTYPE_p_signed_char.getCPtr(obj), value);
+  }
+
+  public static byte charp_value(SWIGTYPE_p_signed_char obj) {
+    return brickpiJNI.charp_value(SWIGTYPE_p_signed_char.getCPtr(obj));
+  }
+
+  public static SWIGTYPE_p_unsigned_char new_ucharp() {
+    long cPtr = brickpiJNI.new_ucharp();
+    return (cPtr == 0) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
+  }
+
+  public static SWIGTYPE_p_unsigned_char copy_ucharp(short value) {
+    long cPtr = brickpiJNI.copy_ucharp(value);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
+  }
+
+  public static void delete_ucharp(SWIGTYPE_p_unsigned_char obj) {
+    brickpiJNI.delete_ucharp(SWIGTYPE_p_unsigned_char.getCPtr(obj));
+  }
+
+  public static void ucharp_assign(SWIGTYPE_p_unsigned_char obj, short value) {
+    brickpiJNI.ucharp_assign(SWIGTYPE_p_unsigned_char.getCPtr(obj), value);
+  }
+
+  public static short ucharp_value(SWIGTYPE_p_unsigned_char obj) {
+    return brickpiJNI.ucharp_value(SWIGTYPE_p_unsigned_char.getCPtr(obj));
+  }
+
+  public static SWIGTYPE_p_spi_ioc_transfer new_spi_ioc_transferp() {
+    long cPtr = brickpiJNI.new_spi_ioc_transferp();
+    return (cPtr == 0) ? null : new SWIGTYPE_p_spi_ioc_transfer(cPtr, false);
+  }
+
+  public static SWIGTYPE_p_spi_ioc_transfer copy_spi_ioc_transferp(SWIGTYPE_p_spi_ioc_transfer value) {
+    long cPtr = brickpiJNI.copy_spi_ioc_transferp(SWIGTYPE_p_spi_ioc_transfer.getCPtr(value));
+    return (cPtr == 0) ? null : new SWIGTYPE_p_spi_ioc_transfer(cPtr, false);
+  }
+
+  public static void delete_spi_ioc_transferp(SWIGTYPE_p_spi_ioc_transfer obj) {
+    brickpiJNI.delete_spi_ioc_transferp(SWIGTYPE_p_spi_ioc_transfer.getCPtr(obj));
+  }
+
+  public static void spi_ioc_transferp_assign(SWIGTYPE_p_spi_ioc_transfer obj, SWIGTYPE_p_spi_ioc_transfer value) {
+    brickpiJNI.spi_ioc_transferp_assign(SWIGTYPE_p_spi_ioc_transfer.getCPtr(obj), SWIGTYPE_p_spi_ioc_transfer.getCPtr(value));
+  }
+
+  public static SWIGTYPE_p_spi_ioc_transfer spi_ioc_transferp_value(SWIGTYPE_p_spi_ioc_transfer obj) {
+    return new SWIGTYPE_p_spi_ioc_transfer(brickpiJNI.spi_ioc_transferp_value(SWIGTYPE_p_spi_ioc_transfer.getCPtr(obj)), true);
   }
 
 }

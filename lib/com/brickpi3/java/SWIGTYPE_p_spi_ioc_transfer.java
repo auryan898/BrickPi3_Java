@@ -8,7 +8,7 @@
 
 package com.brickpi3.java;
 
-public class SWIGTYPE_p_spi_ioc_transfer {
+public class SWIGTYPE_p_spi_ioc_transfer extends SWIG {
   private transient long swigCPtr;
 
   protected SWIGTYPE_p_spi_ioc_transfer(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
@@ -21,6 +21,13 @@ public class SWIGTYPE_p_spi_ioc_transfer {
 
   protected static long getCPtr(SWIGTYPE_p_spi_ioc_transfer obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
+  }
+
+  public int hashCode() {
+    return (int)swigCPtr;
+  }
+  protected long getPointer() {
+    return swigCPtr;
   }
 }
 

@@ -8,19 +8,26 @@
 
 package com.brickpi3.java;
 
-public class SWIGTYPE_p_int32_t {
+public class SWIGTYPE_p_int extends SWIG {
   private transient long swigCPtr;
 
-  protected SWIGTYPE_p_int32_t(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
+  protected SWIGTYPE_p_int(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
     swigCPtr = cPtr;
   }
 
-  protected SWIGTYPE_p_int32_t() {
+  protected SWIGTYPE_p_int() {
     swigCPtr = 0;
   }
 
-  protected static long getCPtr(SWIGTYPE_p_int32_t obj) {
+  protected static long getCPtr(SWIGTYPE_p_int obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
+  }
+
+  public int hashCode() {
+    return (int)swigCPtr;
+  }
+  protected long getPointer() {
+    return swigCPtr;
   }
 }
 

@@ -8,7 +8,7 @@
 
 package com.brickpi3.java;
 
-public class sensor_infrared_t {
+public class sensor_infrared_t extends SWIG {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
@@ -36,39 +36,43 @@ public class sensor_infrared_t {
     }
   }
 
-  public void setProximity(SWIGTYPE_p_uint8_t value) {
-    brickpiJNI.sensor_infrared_t_proximity_set(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(value));
+  public int hashCode() {
+    return (int)swigCPtr;
+  }
+  protected long getPointer() {
+    return swigCPtr;
   }
 
-  public SWIGTYPE_p_uint8_t getProximity() {
-    return new SWIGTYPE_p_uint8_t(brickpiJNI.sensor_infrared_t_proximity_get(swigCPtr, this), true);
+  public void setProximity(short value) {
+    brickpiJNI.sensor_infrared_t_proximity_set(swigCPtr, this, value);
   }
 
-  public void setDistance(SWIGTYPE_p_int8_t value) {
-    brickpiJNI.sensor_infrared_t_distance_set(swigCPtr, this, SWIGTYPE_p_int8_t.getCPtr(value));
+  public short getProximity() {
+    return brickpiJNI.sensor_infrared_t_proximity_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_int8_t getDistance() {
-    long cPtr = brickpiJNI.sensor_infrared_t_distance_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_int8_t(cPtr, false);
+  public void setDistance(byte[] value) {
+    brickpiJNI.sensor_infrared_t_distance_set(swigCPtr, this, value);
   }
 
-  public void setHeading(SWIGTYPE_p_int8_t value) {
-    brickpiJNI.sensor_infrared_t_heading_set(swigCPtr, this, SWIGTYPE_p_int8_t.getCPtr(value));
+  public byte[] getDistance() {
+    return brickpiJNI.sensor_infrared_t_distance_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_int8_t getHeading() {
-    long cPtr = brickpiJNI.sensor_infrared_t_heading_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_int8_t(cPtr, false);
+  public void setHeading(byte[] value) {
+    brickpiJNI.sensor_infrared_t_heading_set(swigCPtr, this, value);
   }
 
-  public void setRemote(SWIGTYPE_p_uint8_t value) {
-    brickpiJNI.sensor_infrared_t_remote_set(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(value));
+  public byte[] getHeading() {
+    return brickpiJNI.sensor_infrared_t_heading_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_uint8_t getRemote() {
-    long cPtr = brickpiJNI.sensor_infrared_t_remote_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_uint8_t(cPtr, false);
+  public void setRemote(short[] value) {
+    brickpiJNI.sensor_infrared_t_remote_set(swigCPtr, this, value);
+  }
+
+  public short[] getRemote() {
+    return brickpiJNI.sensor_infrared_t_remote_get(swigCPtr, this);
   }
 
   public sensor_infrared_t() {

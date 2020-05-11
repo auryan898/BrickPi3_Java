@@ -8,7 +8,7 @@
 
 package com.brickpi3.java;
 
-public class i2c_struct_t {
+public class i2c_struct_t extends SWIG {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
@@ -36,62 +36,67 @@ public class i2c_struct_t {
     }
   }
 
-  public void setSpeed(SWIGTYPE_p_uint8_t value) {
-    brickpiJNI.i2c_struct_t_speed_set(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(value));
+  public int hashCode() {
+    return (int)swigCPtr;
+  }
+  protected long getPointer() {
+    return swigCPtr;
   }
 
-  public SWIGTYPE_p_uint8_t getSpeed() {
-    return new SWIGTYPE_p_uint8_t(brickpiJNI.i2c_struct_t_speed_get(swigCPtr, this), true);
+  public void setSpeed(short value) {
+    brickpiJNI.i2c_struct_t_speed_set(swigCPtr, this, value);
   }
 
-  public void setDelay(SWIGTYPE_p_uint8_t value) {
-    brickpiJNI.i2c_struct_t_delay_set(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(value));
+  public short getSpeed() {
+    return brickpiJNI.i2c_struct_t_speed_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_uint8_t getDelay() {
-    return new SWIGTYPE_p_uint8_t(brickpiJNI.i2c_struct_t_delay_get(swigCPtr, this), true);
+  public void setDelay(short value) {
+    brickpiJNI.i2c_struct_t_delay_set(swigCPtr, this, value);
   }
 
-  public void setAddress(SWIGTYPE_p_uint8_t value) {
-    brickpiJNI.i2c_struct_t_address_set(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(value));
+  public short getDelay() {
+    return brickpiJNI.i2c_struct_t_delay_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_uint8_t getAddress() {
-    return new SWIGTYPE_p_uint8_t(brickpiJNI.i2c_struct_t_address_get(swigCPtr, this), true);
+  public void setAddress(short value) {
+    brickpiJNI.i2c_struct_t_address_set(swigCPtr, this, value);
   }
 
-  public void setLength_write(SWIGTYPE_p_uint8_t value) {
-    brickpiJNI.i2c_struct_t_length_write_set(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(value));
+  public short getAddress() {
+    return brickpiJNI.i2c_struct_t_address_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_uint8_t getLength_write() {
-    return new SWIGTYPE_p_uint8_t(brickpiJNI.i2c_struct_t_length_write_get(swigCPtr, this), true);
+  public void setLength_write(short value) {
+    brickpiJNI.i2c_struct_t_length_write_set(swigCPtr, this, value);
   }
 
-  public void setBuffer_write(SWIGTYPE_p_uint8_t value) {
-    brickpiJNI.i2c_struct_t_buffer_write_set(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(value));
+  public short getLength_write() {
+    return brickpiJNI.i2c_struct_t_length_write_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_uint8_t getBuffer_write() {
-    long cPtr = brickpiJNI.i2c_struct_t_buffer_write_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_uint8_t(cPtr, false);
+  public void setBuffer_write(short[] value) {
+    brickpiJNI.i2c_struct_t_buffer_write_set(swigCPtr, this, value);
   }
 
-  public void setLength_read(SWIGTYPE_p_uint8_t value) {
-    brickpiJNI.i2c_struct_t_length_read_set(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(value));
+  public short[] getBuffer_write() {
+    return brickpiJNI.i2c_struct_t_buffer_write_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_uint8_t getLength_read() {
-    return new SWIGTYPE_p_uint8_t(brickpiJNI.i2c_struct_t_length_read_get(swigCPtr, this), true);
+  public void setLength_read(short value) {
+    brickpiJNI.i2c_struct_t_length_read_set(swigCPtr, this, value);
   }
 
-  public void setBuffer_read(SWIGTYPE_p_uint8_t value) {
-    brickpiJNI.i2c_struct_t_buffer_read_set(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(value));
+  public short getLength_read() {
+    return brickpiJNI.i2c_struct_t_length_read_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_uint8_t getBuffer_read() {
-    long cPtr = brickpiJNI.i2c_struct_t_buffer_read_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_uint8_t(cPtr, false);
+  public void setBuffer_read(short[] value) {
+    brickpiJNI.i2c_struct_t_buffer_read_set(swigCPtr, this, value);
+  }
+
+  public short[] getBuffer_read() {
+    return brickpiJNI.i2c_struct_t_buffer_read_get(swigCPtr, this);
   }
 
   public i2c_struct_t() {

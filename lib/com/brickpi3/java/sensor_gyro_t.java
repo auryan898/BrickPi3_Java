@@ -8,7 +8,7 @@
 
 package com.brickpi3.java;
 
-public class sensor_gyro_t {
+public class sensor_gyro_t extends SWIG {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
@@ -36,20 +36,27 @@ public class sensor_gyro_t {
     }
   }
 
-  public void setAbs(SWIGTYPE_p_int16_t value) {
-    brickpiJNI.sensor_gyro_t_abs_set(swigCPtr, this, SWIGTYPE_p_int16_t.getCPtr(value));
+  public int hashCode() {
+    return (int)swigCPtr;
+  }
+  protected long getPointer() {
+    return swigCPtr;
   }
 
-  public SWIGTYPE_p_int16_t getAbs() {
-    return new SWIGTYPE_p_int16_t(brickpiJNI.sensor_gyro_t_abs_get(swigCPtr, this), true);
+  public void setAbs(short value) {
+    brickpiJNI.sensor_gyro_t_abs_set(swigCPtr, this, value);
   }
 
-  public void setDps(SWIGTYPE_p_int16_t value) {
-    brickpiJNI.sensor_gyro_t_dps_set(swigCPtr, this, SWIGTYPE_p_int16_t.getCPtr(value));
+  public short getAbs() {
+    return brickpiJNI.sensor_gyro_t_abs_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_int16_t getDps() {
-    return new SWIGTYPE_p_int16_t(brickpiJNI.sensor_gyro_t_dps_get(swigCPtr, this), true);
+  public void setDps(short value) {
+    brickpiJNI.sensor_gyro_t_dps_set(swigCPtr, this, value);
+  }
+
+  public short getDps() {
+    return brickpiJNI.sensor_gyro_t_dps_get(swigCPtr, this);
   }
 
   public sensor_gyro_t() {

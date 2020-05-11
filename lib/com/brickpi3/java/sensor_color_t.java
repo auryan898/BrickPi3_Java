@@ -8,7 +8,7 @@
 
 package com.brickpi3.java;
 
-public class sensor_color_t {
+public class sensor_color_t extends SWIG {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
@@ -36,44 +36,51 @@ public class sensor_color_t {
     }
   }
 
-  public void setColor(SWIGTYPE_p_int8_t value) {
-    brickpiJNI.sensor_color_t_color_set(swigCPtr, this, SWIGTYPE_p_int8_t.getCPtr(value));
+  public int hashCode() {
+    return (int)swigCPtr;
+  }
+  protected long getPointer() {
+    return swigCPtr;
   }
 
-  public SWIGTYPE_p_int8_t getColor() {
-    return new SWIGTYPE_p_int8_t(brickpiJNI.sensor_color_t_color_get(swigCPtr, this), true);
+  public void setColor(byte value) {
+    brickpiJNI.sensor_color_t_color_set(swigCPtr, this, value);
   }
 
-  public void setReflected_red(SWIGTYPE_p_int16_t value) {
-    brickpiJNI.sensor_color_t_reflected_red_set(swigCPtr, this, SWIGTYPE_p_int16_t.getCPtr(value));
+  public byte getColor() {
+    return brickpiJNI.sensor_color_t_color_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_int16_t getReflected_red() {
-    return new SWIGTYPE_p_int16_t(brickpiJNI.sensor_color_t_reflected_red_get(swigCPtr, this), true);
+  public void setReflected_red(short value) {
+    brickpiJNI.sensor_color_t_reflected_red_set(swigCPtr, this, value);
   }
 
-  public void setReflected_green(SWIGTYPE_p_int16_t value) {
-    brickpiJNI.sensor_color_t_reflected_green_set(swigCPtr, this, SWIGTYPE_p_int16_t.getCPtr(value));
+  public short getReflected_red() {
+    return brickpiJNI.sensor_color_t_reflected_red_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_int16_t getReflected_green() {
-    return new SWIGTYPE_p_int16_t(brickpiJNI.sensor_color_t_reflected_green_get(swigCPtr, this), true);
+  public void setReflected_green(short value) {
+    brickpiJNI.sensor_color_t_reflected_green_set(swigCPtr, this, value);
   }
 
-  public void setReflected_blue(SWIGTYPE_p_int16_t value) {
-    brickpiJNI.sensor_color_t_reflected_blue_set(swigCPtr, this, SWIGTYPE_p_int16_t.getCPtr(value));
+  public short getReflected_green() {
+    return brickpiJNI.sensor_color_t_reflected_green_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_int16_t getReflected_blue() {
-    return new SWIGTYPE_p_int16_t(brickpiJNI.sensor_color_t_reflected_blue_get(swigCPtr, this), true);
+  public void setReflected_blue(short value) {
+    brickpiJNI.sensor_color_t_reflected_blue_set(swigCPtr, this, value);
   }
 
-  public void setAmbient(SWIGTYPE_p_int16_t value) {
-    brickpiJNI.sensor_color_t_ambient_set(swigCPtr, this, SWIGTYPE_p_int16_t.getCPtr(value));
+  public short getReflected_blue() {
+    return brickpiJNI.sensor_color_t_reflected_blue_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_int16_t getAmbient() {
-    return new SWIGTYPE_p_int16_t(brickpiJNI.sensor_color_t_ambient_get(swigCPtr, this), true);
+  public void setAmbient(short value) {
+    brickpiJNI.sensor_color_t_ambient_set(swigCPtr, this, value);
+  }
+
+  public short getAmbient() {
+    return brickpiJNI.sensor_color_t_ambient_get(swigCPtr, this);
   }
 
   public sensor_color_t() {

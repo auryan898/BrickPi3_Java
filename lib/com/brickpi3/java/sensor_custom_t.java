@@ -8,7 +8,7 @@
 
 package com.brickpi3.java;
 
-public class sensor_custom_t {
+public class sensor_custom_t extends SWIG {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
@@ -36,20 +36,27 @@ public class sensor_custom_t {
     }
   }
 
-  public void setAdc1(SWIGTYPE_p_uint16_t value) {
-    brickpiJNI.sensor_custom_t_adc1_set(swigCPtr, this, SWIGTYPE_p_uint16_t.getCPtr(value));
+  public int hashCode() {
+    return (int)swigCPtr;
+  }
+  protected long getPointer() {
+    return swigCPtr;
   }
 
-  public SWIGTYPE_p_uint16_t getAdc1() {
-    return new SWIGTYPE_p_uint16_t(brickpiJNI.sensor_custom_t_adc1_get(swigCPtr, this), true);
+  public void setAdc1(int value) {
+    brickpiJNI.sensor_custom_t_adc1_set(swigCPtr, this, value);
   }
 
-  public void setAdc6(SWIGTYPE_p_uint16_t value) {
-    brickpiJNI.sensor_custom_t_adc6_set(swigCPtr, this, SWIGTYPE_p_uint16_t.getCPtr(value));
+  public int getAdc1() {
+    return brickpiJNI.sensor_custom_t_adc1_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_uint16_t getAdc6() {
-    return new SWIGTYPE_p_uint16_t(brickpiJNI.sensor_custom_t_adc6_get(swigCPtr, this), true);
+  public void setAdc6(int value) {
+    brickpiJNI.sensor_custom_t_adc6_set(swigCPtr, this, value);
+  }
+
+  public int getAdc6() {
+    return brickpiJNI.sensor_custom_t_adc6_get(swigCPtr, this);
   }
 
   public void setPin5(boolean value) {

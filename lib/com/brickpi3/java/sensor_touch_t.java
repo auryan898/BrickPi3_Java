@@ -8,7 +8,7 @@
 
 package com.brickpi3.java;
 
-public class sensor_touch_t {
+public class sensor_touch_t extends SWIG {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
@@ -34,6 +34,13 @@ public class sensor_touch_t {
       }
       swigCPtr = 0;
     }
+  }
+
+  public int hashCode() {
+    return (int)swigCPtr;
+  }
+  protected long getPointer() {
+    return swigCPtr;
   }
 
   public void setPressed(boolean value) {
