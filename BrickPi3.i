@@ -13,8 +13,12 @@
     return swig.getPointer();
   }
   
-  public static SWIGTYPE_p_void createVoid(long cPtr, boolean futureUse) {
+  public static SWIGTYPE_p_void createVoidPtr(long cPtr, boolean futureUse) {
     return new SWIGTYPE_p_void(cPtr, futureUse);
+  }
+
+  public static SWIGTYPE_p_void swigToVoidPtr(SWIG swig) {
+    return createVoidPtr(getPointer(swig), false);
   }
 %}
 %include "arrays_java.i"

@@ -13,12 +13,18 @@ public class brickpiJNI {
   static {
     com.brickpi3.java.LibraryExtractionHelper.loadBrickPiLibrary();
   }
+  
+
+
+  public static SWIGTYPE_p_void swigToVoidPtr(SWIG swig) {
+    return createVoidPtr(getPointer(swig), false);
+  }
 
   public static long getPointer(SWIG swig) {
     return swig.getPointer();
   }
   
-  public static SWIGTYPE_p_void createVoid(long cPtr, boolean futureUse) {
+  public static SWIGTYPE_p_void createVoidPtr(long cPtr, boolean futureUse) {
     return new SWIGTYPE_p_void(cPtr, futureUse);
   }
 
