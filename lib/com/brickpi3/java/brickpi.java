@@ -101,28 +101,6 @@ public class brickpi implements brickpiConstants {
     return brickpiJNI.shortp_value(SWIGTYPE_p_short.getCPtr(obj));
   }
 
-  public static SWIGTYPE_p_long new_longp() {
-    long cPtr = brickpiJNI.new_longp();
-    return (cPtr == 0) ? null : new SWIGTYPE_p_long(cPtr, false);
-  }
-
-  public static SWIGTYPE_p_long copy_longp(int value) {
-    long cPtr = brickpiJNI.copy_longp(value);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_long(cPtr, false);
-  }
-
-  public static void delete_longp(SWIGTYPE_p_long obj) {
-    brickpiJNI.delete_longp(SWIGTYPE_p_long.getCPtr(obj));
-  }
-
-  public static void longp_assign(SWIGTYPE_p_long obj, int value) {
-    brickpiJNI.longp_assign(SWIGTYPE_p_long.getCPtr(obj), value);
-  }
-
-  public static int longp_value(SWIGTYPE_p_long obj) {
-    return brickpiJNI.longp_value(SWIGTYPE_p_long.getCPtr(obj));
-  }
-
   public static SWIGTYPE_p_int new_intp() {
     long cPtr = brickpiJNI.new_intp();
     return (cPtr == 0) ? null : new SWIGTYPE_p_int(cPtr, false);

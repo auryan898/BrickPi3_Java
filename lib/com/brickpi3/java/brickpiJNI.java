@@ -263,11 +263,6 @@ public class brickpiJNI {
   public final static native void delete_shortp(long jarg1);
   public final static native void shortp_assign(long jarg1, short jarg2);
   public final static native short shortp_value(long jarg1);
-  public final static native long new_longp();
-  public final static native long copy_longp(int jarg1);
-  public final static native void delete_longp(long jarg1);
-  public final static native void longp_assign(long jarg1, int jarg2);
-  public final static native int longp_value(long jarg1);
   public final static native long new_intp();
   public final static native long copy_intp(int jarg1);
   public final static native void delete_intp(long jarg1);
