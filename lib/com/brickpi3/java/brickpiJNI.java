@@ -14,6 +14,14 @@ public class brickpiJNI {
     com.brickpi3.java.LibraryExtractionHelper.loadBrickPiLibrary();
   }
 
+  public static long getPointer(SWIG swig) {
+    return swig.getPointer();
+  }
+  
+  public static SWIGTYPE_p_void createVoid(long cPtr, boolean futureUse) {
+    return new SWIGTYPE_p_void(cPtr, futureUse);
+  }
+
   public final static native String FIRMWARE_VERSION_REQUIRED_get();
   public final static native int LONGEST_SPI_TRANSFER_get();
   public final static native int LONGEST_I2C_TRANSFER_get();
