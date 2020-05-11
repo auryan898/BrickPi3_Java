@@ -8,6 +8,14 @@
   static {
     com.brickpi3.java.LibraryExtractionHelper.loadBrickPiLibrary();
   }
+
+  public static long getPointer(SWIG swig) {
+    return swig.getPointer();
+  }
+  
+  public static SWIGTYPE_p_void createVoid(long cPtr, boolean futureUse) {
+    return new SWIGTYPE_p_void(cPtr, futureUse);
+  }
 %}
 %include "arrays_java.i"
 %include "stdint.i"

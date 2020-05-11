@@ -15,7 +15,7 @@ public class PiBrick {
     b = new BrickPi3(address);
   }
 
-  BrickPi3 getBrickPi3() {
+  protected BrickPi3 getBrickPi3() {
     return b;
   }
 
@@ -158,7 +158,7 @@ public class PiBrick {
    * @return
    * @see    com.brickpi3.java.BrickPi3#get_voltage_battery()
    */
-  public float getVoltageBatter() {
+  public float getVoltageBattery() {
     return b.get_voltage_battery();
   }
 
