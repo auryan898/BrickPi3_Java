@@ -20,7 +20,7 @@ public class PiMotor {
       throw new IllegalArgumentException("Cannot create motor from null values");
     this.port = port;
     this.brick = brick;
-    portAddress = (short)port.getPortAddress();
+    portAddress = (short)this.port.getPortAddress();
   }
 
   protected void update() {
